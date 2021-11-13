@@ -10320,12 +10320,12 @@ blockquote {
     max-width: 36px;
     display: inline-block;
 }
-.header .logo .logo-lnk {
+/* .header .logo .logo-lnk {
     font-size: 18px;
     text-decoration: none;
     display: inline-block;
     max-width: 130px;
-}
+} */
 .header .download-cv-btn {
     float: right;
     margin-top: 8px;
@@ -10580,9 +10580,9 @@ blockquote {
     .header .logo img.logo-img {
         margin-right: 14px;
     }
-    .header .logo .logo-lnk {
+    /* .header .logo .logo-lnk {
         max-width: 108px;
-    }
+    } */
 }
 @media (max-width: 992px) {
     .header {
