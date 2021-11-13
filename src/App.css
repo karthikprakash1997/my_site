@@ -1,0 +1,199 @@
+body {
+  background: #f0f0f0;
+}
+aside,
+main {
+  padding: 10px !important;
+}
+@media (min-width: 992px) {
+  main {
+    padding-left: 0 !important;
+  }
+}
+aside .inner,
+main .inner {
+  background: #fff;
+  padding: 20px;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #777;
+  cursor: pointer;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+section h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+a {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.divider {
+  padding: 10px 20px 0 20px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+.fa {
+  color: lightseagreen;
+  margin-right: 5px;
+  top: 4px;
+}
+.fb {
+  color: red;
+  margin-right: 5px;
+  top: 4px;
+}
+.contact-links li {
+  margin-bottom: 15px;
+}
+.profileLinks li a {
+  text-decoration: none;
+  color: #000;
+}
+.profileLinks li a:hover {
+  color: #23527c;
+}
+
+.about,
+.work,
+.education,
+.skills {
+  margin-bottom: 30px;
+}
+.skills-list li {
+  font-size: 18px;
+}
+.workDates {
+  color: #777;
+}
+
+.pl {
+  margin: 15px;
+  display: table;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+.heading {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.sm {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.cn {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.acc {
+  color: #000;
+}
+.skillCard {
+  margin: 10px;
+}
+.image1 {
+  display: flex;
+  justify-content: center;
+}
+
+.skillCard1 {
+  margin: 10px;
+  background-image: url(../src//assets//svg//media/facebook.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgimage {
+  background-image: url(../src/assets/svg/media/facebook.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(238, 238, 238, 0.9) !important;
+  background-blend-mode: color;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.cards1 {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px auto;
+  box-sizing: border-box;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cards {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px auto;
+  box-sizing: border-box;
+
+  background: linear-gradient(-45deg, #f79f1f, #ffc312, #f79f1f, #ffc312);
+  background-size: 400%400%;
+  animation: gradient 15seaseinfinite;
+}
+.backgroundImage {
+  background-image: url("../src/assets/png/intern/psgbackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.DelvingbackgroundImage {
+  background-image: url("../src/assets/png/intern/Delving.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.TnebbackgroundImage {
+  background-image: url("../src/assets/png/intern/Tneb.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.psgiasbackgroundImage {
+  background-image: url("../src/assets/png/intern/psgiasbackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Hover:hover {
+  transform: scale(1.2);
+}
