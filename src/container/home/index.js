@@ -1,27 +1,31 @@
 import React from "react";
 import { Grid, Typography } from '@mui/material';
-import { makeStyles } from "@mui/styles";
+// import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
+import Section from "../../components/section";
+// import ParticleAnimation from "../../components/particleAnimation";
+
 
 const Home = () => {
 
-    const useStyles = makeStyles({
-        sectionMain: {
-            width: '100%',
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            background: 'url(src/assets/images/bg-img.jpg) no-repeat center',
-        }
-    })
+    // const useStyles = makeStyles({
+    //     sectionMain: {
+    //         width: '100%',
+    //         height: '100vh',
+    //         display: 'flex',
+    //         alignItems: 'center',
+    //         background: 'url(src/assets/images/bg-img.jpg) no-repeat center',
+    //     }
+    // })
 
-    const classes = useStyles();
+    // const classes = useStyles();
 
     return (
-        <section className={`${classes.sectionMain}`}>
+        <Section>
+            {/* <ParticleAnimation /> */}
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>
                 <Grid item xs={12} md={6} >
-                    <Box padding='5%' display='flex'  flexDirection='column'>
+                    <Box padding='5%' display='flex' flexDirection='column'>
                         <Box>
                             <Box>Hi</Box>
                             <Box>I am Karthik Prakash</Box>
@@ -50,7 +54,7 @@ const Home = () => {
                     </div>
                 </Grid>
             </Grid>
-        </section>
+        </Section>
     )
 }
 

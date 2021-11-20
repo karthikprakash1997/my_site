@@ -11,8 +11,8 @@ import { LazyMotion, domAnimation, m } from "framer-motion"
 const Skills = () => {
 
     return (
-        <Grid container spacing={3} alignItems="stretch">
-            {[1, 2, 3].map((it) =>
+        <Grid container spacing={2} maxWidth='lg' marginX='auto'>
+            {[1].map((it) =>
                 <Grid item xs={12} sm={4} key={it}>
                     <LazyMotion features={domAnimation}>
                         <m.div

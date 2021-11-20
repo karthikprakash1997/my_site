@@ -4,6 +4,6 @@ export const HEADER = [
     { title: 'Education & Experience', value: 'education' },
     { title: 'Skills', value: 'skills' },
     { title: 'Projects', value: 'projects' },
-    { title: 'Interests', value: 'interests' },
+    // { title: 'Interests', value: 'interests' },
     { title: 'Contact', value: 'contact' },
 ]
