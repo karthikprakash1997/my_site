@@ -16,7 +16,7 @@ const Map = () => {
     return (
         <div>
         <ReactMapGL
-            // {...viewport}
+            {...viewport}
             height={500}
             width={'100%'}
             zoom={8}

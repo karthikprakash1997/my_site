@@ -4,7 +4,7 @@ const Background = () => {
     return (
         <div class="background-bg">
             <div class="background-filter circle">
-                <img className="background-img" src={require("../../assets/png/myself/1.jpg")} />
+                <img className="background-img" src={require("../../assets/images/png/myself/2.jpg")} />
             </div>
         </div>
     )

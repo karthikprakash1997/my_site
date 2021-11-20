@@ -1,9 +1,9 @@
 import React from "react";
 
-import {Chip, Button} from '@mui/material';
+import { Chip } from '@mui/material';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import appTheme from '../theme';
+import appTheme from '../../components/theme';
 
 const projects = [
     {
@@ -134,7 +134,7 @@ const Projects = () => {
                     <p>
                         {/* eslint-disable-next-line react/no-danger */}
                         <span>
-                        {project.content}
+                            {project.content}
                         </span>
                     </p>
                     <br />

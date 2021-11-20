@@ -1,10 +1,9 @@
 import React from "react";
 import { Grid, Typography } from '@mui/material';
-import Story from './story';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 
-const About = () => {
+const Home = () => {
 
     const useStyles = makeStyles({
         sectionMain: {
@@ -43,8 +42,8 @@ const About = () => {
                     <div style={{ padding: '5%' }}>
                         <div style={{ textAlign: 'center', width: '100%' }}>
                             <img
-                                src={require("../../assets/png/myself/2.jpg")}
-                                style={{ height: "550px", width: '500px' }}
+                                src={require("../../assets/images/png/myself/2.jpg")}
+                                style={{ height: "450px", width: '400px' }}
                                 alt="achivemens"
                             />
                         </div>
@@ -55,4 +54,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default Home;

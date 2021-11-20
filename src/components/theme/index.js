@@ -13,8 +13,6 @@ import React from 'react';
 // import WordpressIcon from 'react-devicon/wordpress/plain';
 import WorkIcon from '@mui/icons-material/Work';
 
-// import DockerIcon from './components/Icons/Apachecordova';
-
 const theme = {
   laravelColor: {
     style: {

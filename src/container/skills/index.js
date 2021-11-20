@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -7,21 +7,20 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { LazyMotion, domAnimation, m } from "framer-motion"
 
-const Interests = () => {
+
+const Skills = () => {
 
     return (
         <Grid container spacing={3} alignItems="stretch">
-            {[1, 2, 3, 4].map((it) =>
-                <Grid item xs={12} sm={3} key={it}>
-                   <LazyMotion features={domAnimation}>
+            {[1, 2, 3].map((it) =>
+                <Grid item xs={12} sm={4} key={it}>
+                    <LazyMotion features={domAnimation}>
                         <m.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             whileHover={{
-                                rotateY: -180,
-                                delay:1
+                                scale: 1.1,
                             }}
-                            transition={{ duration: 0.75 }}
                             exit={{ opacity: 0 }} >
                             <Card >
                                 <CardContent>
@@ -49,4 +48,4 @@ const Interests = () => {
         </Grid>
     )
 }
-export default Interests;
+export default Skills;
