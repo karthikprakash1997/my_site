@@ -13,21 +13,27 @@ import Footer from "../footer";
 
 import { HEADER } from '../../util';
 import Interests from "../interests";
+import { makeStyles } from "@mui/styles";
 
 const Main = () => {
 
-    const [selectedComp, setSelectedComp] = useState(HEADER[0].value);
+    const useStyles = makeStyles({
+        root: {},
+        mainContainer: {
+            background: 'url(src/assets/images/bg-img.jpg) no-repeat center',
+            '&.MuiGrid-container': {
+                paddingTop: 70,
+            }
+        }
+    })
 
+    const [selectedComp, setSelectedComp] = useState(HEADER[0].value);
+    const classes = useStyles();
     return (
-        <Grid container >
+        <>
             <Header setSelectedComp={setSelectedComp} />
 
-            <Grid container rowSpacing={2} padding={'8%'}>
-                {/* <Home /> */}
-                <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-                    <h2 class="title"><span> About Me</span></h2>
-                    <div class="subtitle"><span> My Story </span></div>
-                </div>
+            <Grid container rowSpacing={2}  className={`${classes.mainContainer} main-container`}>
                 <About />
                 <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
                     <h2 class="title"><span> Education & Experience</span></h2>
@@ -61,7 +67,7 @@ const Main = () => {
                 {/* <Footer /> */}
             </Grid>
 
-        </Grid>
+        </>
     )
 }
 
