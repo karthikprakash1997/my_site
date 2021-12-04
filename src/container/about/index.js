@@ -4,18 +4,18 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import WrapperSection from "../../components/section";
 // import ParticleAnimation from "../../components/particleAnimation";
-// import {HomeBg} from '../../assets/images/home-bg.jpg';
+// import {AboutBg} from '../../assets/images/About-bg.jpg';
 
 
-const Home = () => {
+const About = () => {
 
     const useStyles = makeStyles({
-        sectionHome: {
+        sectionAbout: {
             width: '100%',
             height: '100vh',
             display: 'flex',
             alignItems: 'center',
-            // background: HomeBg,
+            // background: AboutBg,
         },
         profile: {
             borderRadius: 10
@@ -36,17 +36,29 @@ const Home = () => {
     const classes = useStyles();
 
     return (
-        <WrapperSection classVariant='section-home'>
+        <WrapperSection classVariant='section-About'>
             {/* <ParticleAnimation /> */}
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>
                 <Grid item xs={12} md={6} >
                     <Box padding='5%' display='flex' flexDirection='column' color='#ffffff'>
-                        <Box>
+                        {/* <Box>
                             <Box mt='4px' className={`${classes.profileName} animate__heartBeat`}>Hi, I am Karthik Prakash</Box>
-                            <Box mt='4px' className={`${classes.role}`}>Software Developer, Tech Enthusiast, Writer(typing animation texts)</Box>
-                        </Box>
-                        <Typography color='#ffffff' lineHeight='26px' mt='16px'>
-                            Downlaod Resume button.
+                            <Box mt='4px' className={`${classes.role}`}>Software Developer, Tech Enthusiast, Writer</Box>
+                        </Box> */}
+                        <Typography lineHeight='26px' mt='16px'>
+                            Being addicted to the joy of developing, I worked on various IoT and Web/Mobile Applications and made my way to a Software Developer. Being a developer, I have never been shy of learning cutting-edge technologies that solve complex and pervasive problems. I have always motivated myself to take ownership of the end-to-end development and focus on quality and the impact of the product.
+
+                            I have 2+ years of experience on
+                            IoT
+                            Software Developer - (Mobile and Web Application development)
+                            AR/VR development (Unity)
+                            Web Architecture
+                            
+                            I am currently learning
+                            Machine Learning
+                            Artificial Intelligence of Things
+
+                            I work in a niche and am eager to solve complex problems that can help society in any means. If you have one, do hit me.
                         </Typography>
                     </Box>
 
@@ -68,4 +80,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default About;
