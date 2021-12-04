@@ -3,7 +3,7 @@ body {
   font-family            : Roboto !important;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color                  : '#24292f'
+  color                  : '#ffffff'
 }
 
 code {
@@ -15,6 +15,11 @@ code {
   font-family: Roboto;
   src        : url(./assets/font/Roboto/Roboto-Regular.ttf);
 }
-/* .about-sec{
-  background: url(./assets/images/bg-img.jpg) no-repeat center;
-} */
+
+.section-home {
+  background           : #013952 url(./assets/images/home-2.png) no-repeat center 100%;
+  background-size      : cover;
+  background-position-y: -120%;
+  z-index: 1;
+  color: #ffffff;
+}

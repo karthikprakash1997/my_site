@@ -17,10 +17,10 @@ const Header = ({ setSelectedComp }) => {
       justifyContent: 'space-between',
       boxShadow: 'unset',
       backdropFilter: 'saturate(180%) blur(20px)',
-      backgroundColor: 'rgba(255,255,255,0.72)',
+      backgroundColor: '#013952',
       height: 70,
       padding: '0 50px',
-      color: '#24292f'
+      color: '#ffffff'
     },
     menu: {
       display: 'flex',
