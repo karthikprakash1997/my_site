@@ -1,14 +1,32 @@
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import SchoolIcon from  '@mui/icons-material/School';
-import WorkIcon from '@mui/icons-material/Work';
+// import SchoolIcon from '@mui/icons-material/School';
+// import WorkIcon from '@mui/icons-material/Work';
+import { WORD_EXPERIENCE_AND_EDUCATION_TIMELINE } from "../../util";
 
 const Education = () => {
 
     return (
         <VerticalTimeline>
-            <VerticalTimelineElement
+            {WORD_EXPERIENCE_AND_EDUCATION_TIMELINE.map((it) => (
+                <VerticalTimelineElement
+                    className={it.variant}
+                    contentStyle={it.contentStyle}
+                    contentArrowStyle={it.contentArrowStyle}
+                    date={it.date}
+                    iconStyle={it.iconStyle}
+                    icon={it.icon}
+                >
+                    <h3 className="vertical-timeline-element-title">{it.title}</h3>
+                    <h4 className="vertical-timeline-element-subtitle">{it.location}</h4>
+                    <p>
+                        {it.description}
+                    </p>
+                </VerticalTimelineElement>
+
+            ))}
+            {/* <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
@@ -20,7 +38,7 @@ const Education = () => {
                 <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
                 <p>
                     Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
+                </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -32,7 +50,7 @@ const Education = () => {
                 <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
                 <p>
                     Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-    </p>
+                </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
@@ -44,7 +62,7 @@ const Education = () => {
                 <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
                 <p>
                     User Experience, Visual Design
-    </p>
+                </p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
@@ -57,7 +75,7 @@ const Education = () => {
                 <h4 className="vertical-timeline-element-subtitle">Certification</h4>
                 <p>
                     Creative Direction, User Experience, Visual Design
-    </p>
+                </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
                 className="vertical-timeline-element--education"
@@ -69,8 +87,8 @@ const Education = () => {
                 <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
                 <p>
                     Creative Direction, Visual Design
-    </p>
-            </VerticalTimelineElement>
+                </p>
+            </VerticalTimelineElement> */}
         </VerticalTimeline>
     )
 }
