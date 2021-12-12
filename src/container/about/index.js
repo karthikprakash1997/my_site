@@ -16,9 +16,7 @@ const About = () => {
             height: '100vh',
             display: 'flex',
             alignItems: 'center',
-            // backgroundColor:'#F4F6F6'
-            backgroundColor:'#F8F9F9'
-            // background: AboutBg,
+            backgroundColor: '#F8F9F9',
         },
         profile: {
             borderRadius: 10
@@ -33,14 +31,29 @@ const About = () => {
         role: {
             fontSize: 36,
             fontWeight: 700
+        },
+        linearText: {
+            background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+        },
+        'pt-0': {
+            paddingTop: 0
+        },
+        textIndent: {
+            textIndent: 36
         }
     })
 
     const classes = useStyles();
 
     return (
-        <WrapperSection classVariant={`${classes.sectionAbout}`}>
+        <WrapperSection classVariant={`${classes.sectionAbout} about-section`}>
             {/* <CircuitAnimation /> */}
+            <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%', backgroundColor: '#F8F9F9' }}>
+                <h2 class="title"><span className='inner-txt'>About</span></h2>
+                <div class="subtitle"><span className={`${classes.linearText}`}> My Story </span></div>
+            </div>
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>
                 <Grid item xs={12} md={6} >
                     <div style={{ padding: '5%' }}>
@@ -60,34 +73,34 @@ const About = () => {
                             <Box mt='4px' className={`${classes.profileName} animate__heartBeat`}>Hi, I am Karthik Prakash</Box>
                             <Box mt='4px' className={`${classes.role}`}>Software Developer, Tech Enthusiast, Writer</Box>
                         </Box> */}
-                        <Typography lineHeight='26px' mt='16px'>
+                        <Typography lineHeight='26px' className={`${classes.textIndent}`}>
                             Being addicted to the joy of developing, I worked on various IoT and Web/Mobile Applications and made my way to a Software Developer. Being a developer, I have never been shy of learning cutting-edge technologies that solve complex and pervasive problems. I have always motivated myself to take ownership of the end-to-end development and focus on quality and the impact of the product.
                         </Typography>
-                        <Typography lineHeight='26px' mt='16px'>
+                        <Typography fontWeight='bold' mt='10px'>
                             I have 2+ years of experience on:
                         </Typography>
-                        <List>
+                        <List className={`${classes["pt-0"]}`}>
                             {['IoT', ' Software Developer - (Mobile and Web Application development)', 'AR/VR development (Unity)', 'Web Architecture'].map(it =>
                             (<ListItem disablePadding>
-                                <Typography lineHeight='26px' mt='16px'>
+                                <Typography lineHeight='26px' mt='8px'>
                                     {/* <FiberManualRecordIcon /> */}
                                     * {it}
                                 </Typography>
                             </ListItem>))}
                         </List>
-                        <Typography lineHeight='26px' mt='16px'>
+                        <Typography lineHeight='26px' fontWeight='bold'>
                             I am currently learning
                         </Typography>
                         <List>
                             {[' Machine Learning', 'Artificial Intelligence of Things'].map(it =>
                             (<ListItem disablePadding>
-                                <Typography lineHeight='26px' mt='16px'>
+                                <Typography lineHeight='26px'>
                                     {/* <FiberManualRecordIcon /> */}
                                     * {it}
                                 </Typography>
                             </ListItem>))}
                         </List>
-                        <Typography lineHeight='26px' mt='16px'>
+                        <Typography lineHeight='26px'>
                             I work in a niche and am eager to solve complex problems that can help society in any means. If you have one, do hit me.
                         </Typography>
                     </Box>

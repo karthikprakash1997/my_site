@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import "../../assets/css/animation-bg.css";
-import { Box } from "@mui/system";
+import "../../assets/css/animation-bg.css";import { Box } from "@mui/system";
 
 const WrapperSection = ({ classVariant, children }) => {
 
@@ -20,10 +19,6 @@ const WrapperSection = ({ classVariant, children }) => {
 
     return (
         <section className={`${classes.sectionMain} ${classVariant}`}>
-            <div className='animated-container'>
-                {[...Array(200)].map((it, index) => <div class="circle-container" key={index}>
-                    <div class="circle"></div></div>)}
-            </div>
             <Box zIndex='1' width='100%'>
                 {children}
             </Box>

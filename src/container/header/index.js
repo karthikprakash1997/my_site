@@ -42,13 +42,11 @@ const Header = ({ setSelectedComp }) => {
       height: 44,
       fontWeight: 'bold'
     },
-
   });
   const classes = useStyles();
   return (
     <header className={`header ${classes.header}`}>
-      <PaintStroke/>
-      <Box display='flex' alignItems='center' marginLeft='auto'>
+      <Box className='header-hldr' display='flex' alignItems='center' marginLeft='auto'>
         <div className="header-sidebar">
           <div className="top-menu">
             <div className="top-menu-nav">

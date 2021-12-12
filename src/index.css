@@ -20,6 +20,57 @@ code {
   /* background           : #013952 url(./assets/images/home-2.png) no-repeat center 100%; */
   background-size      : cover;
   background-position-y: -120%;
-  z-index: 1;
-  color: #ffffff;
+  z-index              : 1;
+  color                : #ffffff;
+}
+
+.header-hldr {
+  background     : url(./assets/images/brush-paint.svg) no-repeat center;
+  background-size: cover;
+  color          : #000000;
+  padding        : 10px 50px;
+}
+
+.about-section .title .inner-txt {
+  background     : url(./assets/images/brush-paint.svg) no-repeat center;
+  color          : #000000;
+  background-size: contain;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.vertical-timeline-element-content {
+  background: #eeeeee !important;
+  box-shadow: 0 6px 8px -4px #999999 !important;
+  display   : flex;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-content-arrow {
+  border-right: 7px solid #eeeeee !important;
+  filter      : drop-shadow(0 6px 8px -4px #999999) !important;
+}
+
+.vertical-timeline .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content {
+  background-color: #FE6B8B !important;
+  color           : #ffffff !important;
+}
+
+.vertical-timeline .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content .vertical-timeline-element-content-arrow {
+  border-right: 7px solid #FE6B8B !important;
+}
+
+.vertical-timeline:before {
+  background-color: #FE6B8B !important;
+  width           : 3px !important;
+}
+
+.skill-list {
+  gap      : 20px;
+  flex-wrap: wrap;
+}
+
+.skill-list .MuiSvgIcon-root {
+  font-size: 3rem;
 }

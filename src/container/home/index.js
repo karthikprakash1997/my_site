@@ -1,6 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import WrapperSection from "../../components/section";
@@ -21,23 +21,25 @@ const Home = () => {
             borderRadius: 10
         },
         profileName: {
-            fontSize: 48,
-            color: 'transparent',
-            WebkitTextStroke: '1px #ffffff',
-            textTransform: 'uppercase',
-            fontWeight: 700
+            fontSize: '46px !important',
+            fontWeight: 700,
         },
-        role: {
-            fontSize: 36,
-            fontWeight: 700
-        },
-        /** gradiant color for text */
         gradName: {
             fontSize: 20,
+            fontWeight: 700
+        },
+        linearText: {
             background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
             WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent"
-        }
+            WebkitTextFillColor: "transparent",
+        },
+        csvBtn: {
+            maxWidth: 'max-content',
+            borderColor: '#FE6B8B !important',
+            height: 'max-content',
+            marginTop: '20px !important'
+        },
+        
     })
 
     const classes = useStyles();
@@ -48,7 +50,8 @@ const Home = () => {
                 <Grid item xs={12} md={6} >
                     <Box padding='5%' display='flex' flexDirection='column' color='#ffffff'>
                         <Box>
-                            <Box mt='4px' className={`${classes.role} ${classes.gradName} animate__heartBeat`}>Hi, I am Karthik Prakash</Box>
+                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hi,</Typography>
+                            <Typography className={`${classes.profileName} ${classes.linearText}`}>I am Karthik Prakash</Typography>
                             <Typed
                                 strings={[
                                     "Software Developer",
@@ -56,15 +59,12 @@ const Home = () => {
                                     "Writer"
                                 ]}
                                 typeSpeed={30}
-                                className={`${classes.role} ${classes.gradName}`}
+                                className={`${classes.linearText} ${classes.gradName}`}
                                 backSpeed={30}
-                                //   attr="placeholder"
                                 loop
                             />
                         </Box>
-                        <Typography lineHeight='26px' mt='16px'>
-                            Downlaod Resume button.
-                        </Typography>
+                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Export CV</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} >

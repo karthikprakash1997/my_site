@@ -1,5 +1,5 @@
 import React from "react";
-import SchoolIcon from  '@mui/icons-material/School';
+import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 
 export const HEADER = [
@@ -16,7 +16,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '2011 - present',
     icon: <WorkIcon />,
-    iconStyle:{ background: 'rgb(33, 150, 243)', color: '#fff' },
+    iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
     title: 'Aximsoft',
     location: 'Coimbatore',
     description: '',
@@ -27,7 +27,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '',
     icon: <SchoolIcon />,
-    iconStyle:{ background: 'rgb(233, 30, 99)', color: '#fff' },
+    iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
     title: 'ML Certification',
     location: '',
     description: '',
@@ -38,7 +38,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '',
     icon: <WorkIcon />,
-    iconStyle:{ background: 'rgb(33, 150, 243)', color: '#fff' },
+    iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
     title: 'Intern',
     location: '',
     description: '',
@@ -49,7 +49,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '',
     icon: <WorkIcon />,
-    iconStyle:{ background: 'rgb(33, 150, 243)', color: '#fff' },
+    iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
     title: 'Intern',
     location: '',
     description: '',
@@ -60,7 +60,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '',
     icon: <SchoolIcon />,
-    iconStyle:{ background: 'rgb(233, 30, 99)', color: '#fff' },
+    iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
     title: 'B.E EEE',
     location: '',
     description: '',
@@ -71,7 +71,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '',
     icon: <SchoolIcon />,
-    iconStyle:{ background: 'rgb(233, 30, 99)', color: '#fff' },
+    iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
     title: '12th',
     location: '',
     description: '',

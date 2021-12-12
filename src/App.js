@@ -35,20 +35,9 @@ const App = () => {
       <Header />
       <Grid container rowSpacing={2} className={`${classes.mainContainer} main-container`}>
         <Home />
-        <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%', backgroundColor:'#F8F9F9' }}>
-          <h2 class="title"><span> About</span></h2>
-          <div class="subtitle"><span> My Story </span></div>
-        </div>
         <About />
-        <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-          <h2 class="title"><span> Education & Experience</span></h2>
-          {/* <div class="subtitle"><span> My Story </span></div> */}
-        </div>
         <Education />
-        <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-          <h2 class="title"><span> Skills</span></h2>
-          {/* <div class="subtitle"><span> My Story </span></div> */}
-        </div>
+      
         <Skills />
         <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
           <h2 class="title"><span> Projects </span></h2>
