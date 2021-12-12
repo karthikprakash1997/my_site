@@ -16,6 +16,8 @@ const About = () => {
             height: '100vh',
             display: 'flex',
             alignItems: 'center',
+            // backgroundColor:'#F4F6F6'
+            backgroundColor:'#F8F9F9'
             // background: AboutBg,
         },
         profile: {
@@ -37,7 +39,7 @@ const About = () => {
     const classes = useStyles();
 
     return (
-        <WrapperSection classVariant='section-About'>
+        <WrapperSection classVariant={`${classes.sectionAbout}`}>
             {/* <CircuitAnimation /> */}
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>
                 <Grid item xs={12} md={6} >

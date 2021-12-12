@@ -1,11 +1,11 @@
 import React from "react";
+import Typed from "react-typed";
 import { Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import WrapperSection from "../../components/section";
-// import ParticleAnimation from "../../components/particleAnimation";
 // import {HomeBg} from '../../assets/images/home-bg.jpg';
-
+// import HomeCircuitAnimation from "../../components/circuitAnimation/home";
 
 const Home = () => {
 
@@ -30,6 +30,13 @@ const Home = () => {
         role: {
             fontSize: 36,
             fontWeight: 700
+        },
+        /** gradiant color for text */
+        gradName: {
+            fontSize: 20,
+            background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent"
         }
     })
 
@@ -37,31 +44,35 @@ const Home = () => {
 
     return (
         <WrapperSection classVariant='section-home'>
-            {/* <ParticleAnimation /> */}
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>
                 <Grid item xs={12} md={6} >
                     <Box padding='5%' display='flex' flexDirection='column' color='#ffffff'>
                         <Box>
-                            <Box mt='4px' className={`${classes.profileName} animate__heartBeat`}>Hi, I am Karthik Prakash</Box>
-                            <Box mt='4px' className={`${classes.role}`}>Software Developer, Tech Enthusiast, Writer(typing animation texts)</Box>
+                            <Box mt='4px' className={`${classes.role} ${classes.gradName} animate__heartBeat`}>Hi, I am Karthik Prakash</Box>
+                            <Typed
+                                strings={[
+                                    "Software Developer",
+                                    "Tech Enthusiast",
+                                    "Writer"
+                                ]}
+                                typeSpeed={30}
+                                className={`${classes.role} ${classes.gradName}`}
+                                backSpeed={30}
+                                //   attr="placeholder"
+                                loop
+                            />
                         </Box>
-                        <Typography color='#ffffff' lineHeight='26px' mt='16px'>
+                        <Typography lineHeight='26px' mt='16px'>
                             Downlaod Resume button.
                         </Typography>
                     </Box>
-
                 </Grid>
                 <Grid item xs={12} md={6} >
-                    <div style={{ padding: '5%' }}>
-                        <div style={{ textAlign: 'center', width: '100%' }}>
-                            <img
-                                src={require("../../assets/images/png/myself/2.jpg")}
-                                style={{ height: "450px", width: '400px' }}
-                                alt="achivemens"
-                                className={`${classes.profile}`}
-                            />
-                        </div>
-                    </div>
+                    {/* <div style={{ padding: '5%' }}>
+                        <div style={{ textAlign: 'center', width: '100%' }}> */}
+                    {/* <HomeCircuitAnimation /> */}
+                    {/* </div> */}
+                    {/* </div> */}
                 </Grid>
             </Grid>
         </WrapperSection >
@@ -69,3 +80,4 @@ const Home = () => {
 }
 
 export default Home;
+

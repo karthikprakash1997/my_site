@@ -2,6 +2,7 @@ import React from "react";
 import { HEADER } from '../../util';
 import { makeStyles } from '@mui/styles';
 import { Box } from '@mui/material';
+import PaintStroke from '../../components/paintStroke';
 
 const Header = ({ setSelectedComp }) => {
   const useStyles = makeStyles({
@@ -16,11 +17,11 @@ const Header = ({ setSelectedComp }) => {
       display: 'flex',
       justifyContent: 'space-between',
       boxShadow: 'unset',
-      backdropFilter: 'saturate(180%) blur(20px)',
-      backgroundColor: '#013952',
+      // backdropFilter: 'saturate(180%) blur(20px)',
+      // backgroundColor: '#013952',
       height: 70,
       padding: '0 50px',
-      color: '#ffffff'
+      // color: '#ffffff'
     },
     menu: {
       display: 'flex',
@@ -46,6 +47,7 @@ const Header = ({ setSelectedComp }) => {
   const classes = useStyles();
   return (
     <header className={`header ${classes.header}`}>
+      <PaintStroke/>
       <Box display='flex' alignItems='center' marginLeft='auto'>
         <div className="header-sidebar">
           <div className="top-menu">
