@@ -61,13 +61,13 @@ const About = () => {
                             <Box mt='4px' className={`${classes.role}`}>Software Developer, Tech Enthusiast, Writer</Box>
                         </Box> */}
                         <Typography lineHeight='26px' mt='16px'>
-                            Being addicted to the joy of developing, I worked on various IoT and Web/Mobile Applications and made my way to a Software Developer. Being a developer, I have never been shy of learning cutting-edge technologies that solve complex and pervasive problems. I have always motivated myself to take ownership of the end-to-end development and focus on quality and the impact of the product.
+                        I am an energetic individual addicted to the joy of developing products with computers and software. In my long journey of developing career, I worked on various IoT and Web/Mobile Applications. Being a developer, I have never been shy of learning cutting-edge technologies that solve complex and pervasive problems. I have always motivated myself to take ownership of the end-to-end development and focus on quality and the impact of the product. 
                         </Typography>
                         <Typography lineHeight='26px' mt='16px'>
                             I have 2+ years of experience on:
                         </Typography>
                         <List>
-                            {['IoT', ' Software Developer - (Mobile and Web Application development)', 'AR/VR development (Unity)', 'Web Architecture'].map(it =>
+                            {['IoT', 'Software Development - (Mobile and Web Application development)'].map(it =>
                             (<ListItem disablePadding>
                                 <Typography lineHeight='26px' mt='16px'>
                                     {/* <FiberManualRecordIcon /> */}
@@ -76,17 +76,17 @@ const About = () => {
                             </ListItem>))}
                         </List>
                         <Typography lineHeight='26px' mt='16px'>
-                            I am currently learning
+                        I am currently learning Machine Learning.  I am a prospective MEng student, eager to Machine Learning, software testing, and management.
                         </Typography>
-                        <List>
+                        {/* <List>
                             {[' Machine Learning', 'Artificial Intelligence of Things'].map(it =>
                             (<ListItem disablePadding>
                                 <Typography lineHeight='26px' mt='16px'>
                                     {/* <FiberManualRecordIcon /> */}
-                                    * {it}
-                                </Typography>
-                            </ListItem>))}
-                        </List>
+                                    {/* * {it} */}
+                                {/* </Typography>
+                            </ListItem>))} */}
+                        {/* </List> */}
                         <Typography lineHeight='26px' mt='16px'>
                             I work in a niche and am eager to solve complex problems that can help society in any means. If you have one, do hit me.
                         </Typography>
