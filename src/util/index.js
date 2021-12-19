@@ -17,8 +17,8 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     date: '2011 - present',
     icon: <WorkIcon />,
     iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
-    title: 'Aximsoft',
-    location: 'Coimbatore',
+    title: 'Aximsoft,',
+    location: ' Coimbatore',
     description: '',
     contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }

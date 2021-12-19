@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { HEADER } from '../../util';
 import { makeStyles } from '@mui/styles';
-import { Box } from '@mui/material';
-import PaintStroke from '../../components/paintStroke';
+import { Box, Drawer, IconButton, List, ListItem } from '@mui/material';
+import { Menu } from '@mui/icons-material';
 
 const Header = ({ setSelectedComp }) => {
-  const useStyles = makeStyles({
+
+  const useStyles = makeStyles(theme => ({
     header: {
       position: 'fixed',
       top: 0,
@@ -16,12 +17,10 @@ const Header = ({ setSelectedComp }) => {
       borderRadius: 'unset',
       display: 'flex',
       justifyContent: 'space-between',
+      alignItems: 'center',
       boxShadow: 'unset',
-      // backdropFilter: 'saturate(180%) blur(20px)',
-      // backgroundColor: '#013952',
       height: 70,
       padding: '0 50px',
-      // color: '#ffffff'
     },
     menu: {
       display: 'flex',
@@ -42,11 +41,25 @@ const Header = ({ setSelectedComp }) => {
       height: 44,
       fontWeight: 'bold'
     },
-  });
+    burgerMenu: {
+      height: 40,
+      width: 40,
+      '& svg': {
+        height: 40,
+        width: 40,
+      }
+    }
+  }));
+
   const classes = useStyles();
+
+  const [isDrawerOpen, setDrawer] = useState(false);
   return (
     <header className={`header ${classes.header}`}>
-      <Box className='header-hldr' display='flex' alignItems='center' marginLeft='auto'>
+      <IconButton className={`${classes.burgerMenu} burger-menu`} color='inherit' edge='end' onClick={() => setDrawer(!isDrawerOpen)}>
+        <Menu />
+      </IconButton>
+      <Box className={`header-hldr`} display='flex' alignItems='center' marginLeft='auto'>
         <div className="header-sidebar">
           <div className="top-menu">
             <div className="top-menu-nav">
@@ -63,6 +76,23 @@ const Header = ({ setSelectedComp }) => {
           </div>
         </div>
       </Box >
+      <Drawer
+        sx={{
+          width: '300px',
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: '300px'
+          }
+        }}
+        anchor='left'
+        open={isDrawerOpen}
+        onClose={() => setDrawer(false)}
+      >
+        <List>
+          {['Home', 'About', 'Education & Experience', 'Skills', 'Projects', 'Contact'].map((it) =>
+            <ListItem button key={`drawer-${it}`}>{it}</ListItem>)}
+        </List>
+      </Drawer>
     </header >
   );
 }

@@ -49,8 +49,8 @@ const About = () => {
     return (
         <WrapperSection classVariant={`${classes.sectionAbout} about-section`}>
             {/* <CircuitAnimation /> */}
-            <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%', backgroundColor: '#F8F9F9' }}>
-                <h2 class="title"><span className='inner-txt'>About</span></h2>
+            <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
+                <h2 class="title"><div className='inner-txt'>About</div></h2>
                 <div class="subtitle"><span className={`${classes.linearText}`}> My Story </span></div>
             </div>
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>
@@ -72,10 +72,10 @@ const About = () => {
                             <Box mt='4px' className={`${classes.profileName} animate__heartBeat`}>Hi, I am Karthik Prakash</Box>
                             <Box mt='4px' className={`${classes.role}`}>Software Developer, Tech Enthusiast, Writer</Box>
                         </Box> */}
-                        <Typography lineHeight='26px' className={`${classes.textIndent}`}>
+                        <Typography lineHeight='26px' textAlign='justify'>
                             I am an energetic individual addicted to the joy of developing products with computers and software. In my long journey of developing career, I worked on various IoT and Web/Mobile Applications. Being a developer, I have never been shy of learning cutting-edge technologies that solve complex and pervasive problems. I have always motivated myself to take ownership of the end-to-end development and focus on quality and the impact of the product.
                         </Typography>
-                        <Typography fontWeight='bold' mt='10px'>
+                        <Typography fontWeight='bold' mt='10px' textAlign='justify'>
                             I have 2+ years of experience on:
                         </Typography>
                         <List className={`${classes["pt-0"]}`}>
@@ -87,7 +87,7 @@ const About = () => {
                                 </Typography>
                             </ListItem>))}
                         </List>
-                        <Typography lineHeight='26px'>
+                        <Typography lineHeight='26px' textAlign='justify'>
                             I am currently learning Machine Learning.  I am a prospective MEng student, eager to Machine Learning, software testing, and management.
                         </Typography>
                         {/* <List>
