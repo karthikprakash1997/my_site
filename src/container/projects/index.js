@@ -1,9 +1,10 @@
 import React from "react";
 
-import { Chip } from '@mui/material';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { makeStyles } from "@mui/styles";
 import 'react-vertical-timeline-component/style.min.css';
-import appTheme from '../../components/theme';
+import WrapperSection from "../../components/section";
+import { Container, Grid, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 
 const projects = [
     {
@@ -104,45 +105,53 @@ const projects = [
 
 
 const Projects = () => {
+    const useStyles = makeStyles({
+        projects: {
+            display: 'flex',
+            alignItems: 'center',
+            gap: 66,
+            margin: '0 auto'
 
+        },
+        proImg: {
+            width: 121,
+            height: 121,
+            borderRadius: '100%'
+        },
+    })
+
+    const classes = useStyles();
     return (
-        <VerticalTimeline>
-            {projects.map((project, i) => (
-                <VerticalTimelineElement
-                    style={{
-                        borderTop: `3px solid ${appTheme[`${project.subcategory}Color`].border
-                            }`,
-                    }}
-                    className={`ResumeProjectsBlock ${appTheme[`${project.subcategory}Color`].className
-                        }`}
-                    key={i} // eslint-disable-line react/no-array-index-key
-                    icon={appTheme[`${project.subcategory}Color`].icon}
-                    iconStyle={appTheme[`${project.subcategory}Color`].style}
-                // date={formatProjectDate(project.data)}
-                >
-                    <div className="ResumeProjectsBlock-technologies">
-                        {project.technologies.map((technology, j) => (
-                            <Chip key={j} label={technology.name} /> // eslint-disable-line react/no-array-index-key
-                        ))}
+        <WrapperSection classVariant={`${classes.sectionAbout} about-section`}>
+            <Container>
+                <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
+                    <h2 class="title"><div className='inner-txt'> Projects </div></h2>
+                    {/* <div class="subtitle"><span> My Story </span></div> */}
+                </div>
+                <Box className={`project-hldr ${classes.projects}`} borderBottom='1px solid #FE6B8B' paddingY={'30px'}>
+                    <img className={`${classes.proImg}`} src={require('../../assets/images/svg/APP/study.svg')} alt="projects" />
+                    <div>
+                        <Box whiteSpace='nowrap'>
+                            <Box display={'inline'}>Date:</Box>
+                            <Box>Dec 19 2021</Box>
+                        </Box>
+                        <Box whiteSpace='nowrap' mt='12px'>
+                            <Box display={'inline'}>Category:</Box>
+                            <Box>Dec 19 2021</Box>
+                        </Box>
                     </div>
-                    <h3 className="vertical-timeline-element-title">
-                        {project.title}
-                    </h3>
-                    <h4 className="vertical-timeline-element-subtitle">
-                        {project.subtitle}
-                    </h4>
-                    <p>
-                        {/* eslint-disable-next-line react/no-danger */}
-                        <span>
-                            {project.content}
-                        </span>
-                    </p>
-                    <br />
-                    <div className="ResumeProjectsBlock-links">
+                    <div>
+                        <Typography variant="h3">IOT</Typography>
+                        <Typography textAlign={'justify'}>
+                            Duis occaecat irure labore veniam id fugiat consequat tempor amet consectetur cillum voluptate. Sint aliquip non officia veniam excepteur. Do amet et tempor sit enim.
+                            Reprehenderit reprehenderit minim velit nulla. Nostrud consequat in mollit quis cupidatat nisi. Velit fugiat nulla anim aliquip dolor laboris non amet ad esse irure consectetur. Ut nisi duis do laboris deserunt exercitation elit
+                            est laborum elit dolore adipisicing fugiat. Esse officia deserunt pariatur nulla in duis amet dolore culpa cillum esse magna.
+                        </Typography>
                     </div>
-                </VerticalTimelineElement>
-            ))}
-        </VerticalTimeline>
+
+                </Box>
+            </Container>
+        </WrapperSection>
     )
 }
 

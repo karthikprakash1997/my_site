@@ -17,7 +17,7 @@ code {
 }
 
 .section-home {
-  /* background           : #013952 url(./assets/images/home-2.png) no-repeat center 100%; */
+  background           : #ffffff url(./assets/images/circuit-anima.svg) no-repeat center 100%;
   background-size      : cover;
   background-position-y: -120%;
   z-index              : 1;
@@ -27,13 +27,21 @@ code {
 .header-hldr {
   background     : url(./assets/images/brush-paint.svg) no-repeat center;
   background-size: cover;
-  color          : #000000;
+  color          : #ffffff;
   padding        : 10px 50px;
+  margin-top     : 12px;
 }
 
-.about-section .title .inner-txt {
+.education-exp.title .inner-txt {
+  padding        : 0 100px 0 50px;
+  width          : max-content;
+  margin         : 0 auto;
+  background-size: cover;
+}
+
+.title .inner-txt {
   background     : url(./assets/images/brush-paint.svg) no-repeat center;
-  color          : #000000;
+  color          : #ffffff;
   background-size: contain;
 }
 
@@ -73,4 +81,63 @@ p {
 
 .skill-list .MuiSvgIcon-root {
   font-size: 3rem;
+}
+
+
+@media screen and (min-width: 992px) {
+  .header .burger-menu {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .header .header-hldr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-hldr {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .vertical-timeline {
+    margin-top: 12% !important;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.vertical-timeline-element-icon {
+  -webkit-transform          : translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.87), inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%) !important;
+}
+
+.vertical-timeline-element-content {
+  align-items: center;
+}
+
+.main-container section:nth-child(odd) {
+  background-color: #ffffff !important;
+}
+
+.main-container section:nth-child(even) {
+  background-color: #F8F9F9 !important;
+}
+
+.contact-form .group-val .label {
+  background-color: #F8F9F9 !important;
+}
+
+.title-grey {
+  background-color: #F8F9F9 !important;
 }

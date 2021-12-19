@@ -4,6 +4,7 @@ import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 import WrapperSection from "../../components/section";
+import { Download } from '@mui/icons-material';
 // import {HomeBg} from '../../assets/images/home-bg.jpg';
 // import HomeCircuitAnimation from "../../components/circuitAnimation/home";
 
@@ -37,9 +38,10 @@ const Home = () => {
             maxWidth: 'max-content',
             borderColor: '#FE6B8B !important',
             height: 'max-content',
-            marginTop: '20px !important'
+            marginTop: '20px !important',
+            padding: '8px !important'
         },
-        
+
     })
 
     const classes = useStyles();
@@ -64,12 +66,12 @@ const Home = () => {
                                 loop
                             />
                         </Box>
-                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Export CV</Button>
+                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}><Download htmlColor='#FE6B8B' />Export CV</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} >
                     {/* <div style={{ padding: '5%' }}>
-                        <div style={{ textAlign: 'center', width: '100%' }}> */}
+                            <div style={{ textAlign: 'center', width: '100%' }}> */}
                     {/* <HomeCircuitAnimation /> */}
                     {/* </div> */}
                     {/* </div> */}

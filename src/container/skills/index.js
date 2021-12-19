@@ -4,8 +4,9 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from "@mui/styles";
 import { LazyMotion, domAnimation, m } from "framer-motion"
-import { Javascript, LinkedIn, Twitter,Facebook, WhatsApp } from '@mui/icons-material';
+import { Javascript, LinkedIn, Twitter, Facebook, WhatsApp } from '@mui/icons-material';
 import { Box } from "@mui/system";
+import WrapperSection from "../../components/section";
 
 
 const Skills = () => {
@@ -18,15 +19,16 @@ const Skills = () => {
 
     const classes = useStyles();
     return (
-        <Grid container spacing={2} maxWidth='lg' marginX='auto'>
-            <div class={`titles ${classes['mt-100']}`} style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-                <h2 class="title"><span> Skills</span></h2>
-                {/* <div class="subtitle"><span> My Story </span></div> */}
-            </div>
-            {[1].map((it) =>
-                <Grid item xs={12} sm={12} key={it} display='flex' justifyContent='center'>
-                    <LazyMotion features={domAnimation}>
-                        {/* <m.div
+        <WrapperSection classVariant={`${classes.sectionAbout} about-section`}>
+            <Grid container spacing={2} maxWidth='lg' marginX='auto'>
+                <div class={`titles ${classes['mt-100']}`} style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
+                    <h2 class="title"><div className='inner-txt'> Skills</div></h2>
+                    {/* <div class="subtitle"><span> My Story </span></div> */}
+                </div>
+                {[1].map((it) =>
+                    <Grid item xs={12} sm={12} key={it} display='flex' justifyContent='center'>
+                        <LazyMotion features={domAnimation}>
+                            {/* <m.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             whileHover={{
@@ -53,17 +55,18 @@ const Skills = () => {
                                 </CardActions>
                             </Card>
                         </m.div> */}
-                        <Box className='skill-list' display='flex' alignItems='center' justifyContent='between'>
-                            <Javascript fontSize='large' />
-                            <Twitter fontSize='large' />
-                            <Facebook fontSize='large' />
-                            <LinkedIn fontSize='large' />
-                            <WhatsApp fontSize='large' />
-                        </Box>
-                    </LazyMotion>
-                </Grid>
-            )}
-        </Grid>
+                            <Box className='skill-list' display='flex' alignItems='center' justifyContent='between'>
+                                <Javascript fontSize='large' />
+                                <Twitter fontSize='large' />
+                                <Facebook fontSize='large' />
+                                <LinkedIn fontSize='large' />
+                                <WhatsApp fontSize='large' />
+                            </Box>
+                        </LazyMotion>
+                    </Grid>
+                )}
+            </Grid>
+        </WrapperSection>
     )
 }
 export default Skills;
