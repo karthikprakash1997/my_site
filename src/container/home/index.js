@@ -22,8 +22,8 @@ const Home = () => {
             borderRadius: 10
         },
         profileName: {
-            fontSize: '46px !important',
-            fontWeight: 700,
+            fontSize: '70px !important',
+            fontWeight: 1000,
         },
         gradName: {
             fontSize: 20,
@@ -52,8 +52,8 @@ const Home = () => {
                 <Grid item xs={12} md={6} >
                     <Box padding='5%' display='flex' flexDirection='column' color='#ffffff'>
                         <Box>
-                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hi,</Typography>
-                            <Typography className={`${classes.profileName} ${classes.linearText}`}>I am Karthik Prakash</Typography>
+                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
+                            <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
                             <Typed
                                 strings={[
                                     "Software Developer",

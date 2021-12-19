@@ -20,7 +20,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     title: 'Aximsoft,',
     location: ' Coimbatore',
     description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+    contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 },
 {
@@ -42,7 +42,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     title: 'Intern',
     location: '',
     description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+    contentStyle: { background: 'rgb(33, 150, 243)',  color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 },
 {
@@ -64,7 +64,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     title: 'B.E EEE',
     location: '',
     description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+    contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 },
 {
