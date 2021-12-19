@@ -22,6 +22,11 @@ const Header = ({ setSelectedComp }) => {
       height: 70,
       padding: '0 50px',
     },
+    linearText: {
+      background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+      // WebkitBackgroundClip: "text",
+      // WebkitTextFillColor: "white",
+    },
     menu: {
       display: 'flex',
       alignItems: 'center',
@@ -55,12 +60,12 @@ const Header = ({ setSelectedComp }) => {
 
   const [isDrawerOpen, setDrawer] = useState(false);
   return (
-    <header className={`header ${classes.header}`}>
+    <header className={`header ${classes.header} ${classes.linearText}`}>
       <IconButton className={`${classes.burgerMenu} burger-menu`} color='inherit' edge='end' onClick={() => setDrawer(!isDrawerOpen)}>
         <Menu />
       </IconButton>
       <Box className={`header-hldr`} display='flex' alignItems='center' marginLeft='auto'>
-        <div className="header-sidebar">
+        <div className={`header-sidebar`}>
           <div className="top-menu">
             <div className="top-menu-nav">
               <div className="menu-topmenu-container">

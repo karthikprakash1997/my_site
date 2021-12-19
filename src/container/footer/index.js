@@ -1,16 +1,43 @@
 import React from "react";
+import { makeStyles } from '@mui/styles';
+import { LinkedIn } from '@mui/icons-material';
+import { Box } from "@mui/system";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
-const Footer = () => (
-    	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wave-wrapper">
-			<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-				alt="Waves" data-lazy-src="wp-content/themes/oli/assets/dist/img/wave.svg"/>
-                <noscript>
-            <img
-					src="wp-content/themes/oli/assets/dist/img/wave.svg" alt="Waves"/></noscript>
-		</div>
+const Footer = () => {
+	const useStyles = makeStyles(() => ({
+		footer: {
+			// position: 'fixed',
+			// top: 0,
+			// left: 0,
+			// right: 0,
+			width: '100%',
+			zIndex: 100,
+			// borderRadius: 'unset',
+			// display: 'flex',
+			// justifyContent: 'space-between',
+			// alignItems: 'center',
+			// boxShadow: 'unset',
+			height: 70,
+			padding: '0 50px',
+		},
+		linearText: {
+			background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+			// WebkitBackgroundClip: "text",
+			// WebkitTextFillColor: "white",
+		},
+	}));
+
+	const classes = useStyles();
+	return (
+		<footer id="colophon" className={`${classes.footer} ${classes.linearText}`}>
+			<Box className='skill-list' display='flex' alignItems='center' justifyContent='center'>
+				<GitHubIcon fontSize='large' sx={{ color: 'white' }} />
+				<LinkedIn fontSize='large' sx={{ color: 'white' }} />
+			</Box>
 		</footer>
-);
+	)
+};
 
 export default Footer;

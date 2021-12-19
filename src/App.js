@@ -8,11 +8,9 @@ import Skills from "./container/skills";
 import Contact from "./container/contact";
 import Projects from "./container/projects";
 import About from "./container/about";
-
-// import Footer from "./container/footer";
+import Footer from "./container/footer";
 
 import { makeStyles } from "@mui/styles";
-import "./main.css";
 
 const App = () => {
 
@@ -31,22 +29,16 @@ const App = () => {
   const classes = useStyles();
   return (
     <>
-
       <Header />
       <Grid container rowSpacing={2} className={`${classes.mainContainer} main-container`}>
         <Home />
         <About />
-        <div class="titles title-grey" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-                <h2 class="title education-exp"><div className='inner-txt'> Education & Experience</div></h2>
-                {/* <div class="subtitle"><span> My Story </span></div> */}
-            </div>
         <Education />
         <Skills />
         <Projects />
         <Contact />
-        {/* <Footer /> */}
+        <Footer />
       </Grid>
-
     </>
   )
 }

@@ -66,7 +66,7 @@ const Home = () => {
                                 loop
                             />
                         </Box>
-                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}><Download htmlColor='#FE6B8B' />Export CV</Button>
+                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} >

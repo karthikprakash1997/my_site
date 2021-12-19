@@ -24,8 +24,32 @@ code {
   color                : #ffffff;
 }
 
+.titles {
+  position: relative;
+  /* margin: 0 0 60px; */
+}
+.titles .title {
+  /* margin: 0 0 10px;
+  max-width: 70%; */
+  font-size: 55px;
+  line-height: 1.2;
+  color: #fff;
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.titles .subtitle {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #68e0cf;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .header-hldr {
-  background     : url(./assets/images/brush-paint.svg) no-repeat center;
+  /* background     : url(./assets/images/brush-paint.svg) no-repeat center; */
   background-size: cover;
   color          : #ffffff;
   padding        : 10px 50px;

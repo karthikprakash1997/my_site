@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from '@mui/material/Grid';
 import { makeStyles } from "@mui/styles";
-import { LazyMotion, domAnimation, m } from "framer-motion"
+import { LazyMotion, domAnimation } from "framer-motion"
 import { Javascript, LinkedIn, Twitter, Facebook, WhatsApp } from '@mui/icons-material';
 import { Box } from "@mui/system";
 import WrapperSection from "../../components/section";
@@ -16,6 +16,7 @@ const Skills = () => {
     })
 
     const classes = useStyles();
+
     return (
         <WrapperSection classVariant={`${classes.sectionAbout} about-section`}>
             <Grid container spacing={2} maxWidth='lg' marginX='auto'>

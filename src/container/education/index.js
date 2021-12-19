@@ -23,7 +23,10 @@ const Education = () => {
     const classes = useStyles();
     return (
         <WrapperSection classVariant={`${classes.sectionEducation} education-exp`}>
-         
+            <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
+                <h2 class="title education-exp"><div className='inner-txt'> Education & Experience</div></h2>
+                {/* <div class="subtitle"><span> My Story </span></div> */}
+            </div>
             <VerticalTimeline>
                 {WORD_EXPERIENCE_AND_EDUCATION_TIMELINE.map((it) => (
                     <VerticalTimelineElement
