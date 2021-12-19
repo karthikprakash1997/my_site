@@ -7,7 +7,6 @@ import WrapperSection from "../../components/section";
 // import CircuitAnimation from "../../components/circuitAnimation";
 // import {AboutBg} from '../../assets/images/About-bg.jpg';
 
-
 const About = () => {
 
     const useStyles = makeStyles({

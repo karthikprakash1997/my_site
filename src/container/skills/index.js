@@ -1,6 +1,4 @@
 import React from "react";
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { makeStyles } from "@mui/styles";
 import { LazyMotion, domAnimation, m } from "framer-motion"
