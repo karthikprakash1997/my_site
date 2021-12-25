@@ -1,32 +1,32 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
+// import { makeStyles } from "@mui/styles";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import WrapperSection from "../../components/section";
+// import WrapperSection from "../../components/section";
 // import SchoolIcon from '@mui/icons-material/School';
 // import WorkIcon from '@mui/icons-material/Work';
 import { WORD_EXPERIENCE_AND_EDUCATION_TIMELINE } from "../../util";
+import Heading from "../../components/heading";
+import { Grid } from "@mui/material";
 
 const Education = () => {
 
-    const useStyles = makeStyles({
-        sectionEducation: {
-            width: '100%',
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: '#ffffff',
-            paddingTop: 100
-        },
-    })
+    // const useStyles = makeStyles({
+    //     sectionEducation: {
+    //         width: '100%',
+    //         height: '100vh',
+    //         display: 'flex',
+    //         alignItems: 'center',
+    //         // backgroundColor: '#031B34',
+    //         paddingTop: 100,
+    //     },
+    // })
 
-    const classes = useStyles();
+    // const classes = useStyles();
     return (
-        <WrapperSection classVariant={`${classes.sectionEducation} education-exp`}>
-            <div class="titles" style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-                <h2 class="title education-exp"><div className='inner-txt'> Education & Experience</div></h2>
-                {/* <div class="subtitle"><span> My Story </span></div> */}
-            </div>
+        <Grid container marginTop={'150px'}>
+        {/* // <WrapperSection classVariant={`${classes.sectionEducation} education-exp`}> */}
+                <Heading heading={"My Journey"} />
             <VerticalTimeline>
                 {WORD_EXPERIENCE_AND_EDUCATION_TIMELINE.map((it) => (
                     <VerticalTimelineElement
@@ -109,7 +109,8 @@ const Education = () => {
                 </p>
             </VerticalTimelineElement> */}
             </VerticalTimeline>
-        </WrapperSection>
+        {/* // </WrapperSection> */}
+        </Grid>
     )
 }
 export default Education;

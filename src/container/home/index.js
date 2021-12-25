@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Typed from "react-typed";
 import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import WrapperSection from "../../components/section";
+// import WrapperSection from "../../components/section";
 import { Download } from '@mui/icons-material';
+import { LinkedIn } from '@mui/icons-material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AiHeadAnimation from "../../components/aiHead";
 // import {HomeBg} from '../../assets/images/home-bg.jpg';
 // import HomeCircuitAnimation from "../../components/circuitAnimation/home";
 
@@ -22,15 +25,16 @@ const Home = () => {
             borderRadius: 10
         },
         profileName: {
-            fontSize: '70px !important',
-            fontWeight: 1000,
+            fontSize: '75px !important',
+            fontWeight: '800px !important',
         },
         gradName: {
             fontSize: 20,
             fontWeight: 700
         },
         linearText: {
-            background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+            background: "-webkit-linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%)",
+            // background:'#FE6B8B',
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
         },
@@ -46,11 +50,13 @@ const Home = () => {
 
     const classes = useStyles();
 
+    const aiFaceAnimataion = useMemo(()=> <AiHeadAnimation />,[])
+
     return (
-        <WrapperSection classVariant='section-home'>
-            <Grid container spacing={2} maxWidth='lg' marginX='auto'>
-                <Grid item xs={12} md={6} >
-                    <Box padding='5%' display='flex' flexDirection='column' color='#ffffff'>
+        // <WrapperSection classVariant='section-home'>
+            <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
+                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                    <Box display='flex' flexDirection='column' color='#ffffff'>
                         <Box>
                             <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
                             <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
@@ -67,17 +73,24 @@ const Home = () => {
                             />
                         </Box>
                         <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
+                        <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
+                            <GitHubIcon fontSize='large' sx={{ color: 'white' }} />
+                            <LinkedIn fontSize='large' sx={{ color: 'white' }} />
+                        </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={6} >
+                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                    <Box maxWidth={'80%'}>
                     {/* <div style={{ padding: '5%' }}>
                             <div style={{ textAlign: 'center', width: '100%' }}> */}
-                    {/* <HomeCircuitAnimation /> */}
+                    {/* <AiHeadAnimation /> */}
+                    {aiFaceAnimataion}
+                    </Box>
                     {/* </div> */}
                     {/* </div> */}
                 </Grid>
             </Grid>
-        </WrapperSection >
+        // </WrapperSection >
     )
 }
 
