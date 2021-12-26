@@ -10,28 +10,13 @@ import Projects from "./container/projects";
 import Footer from "./container/footer";
 import About from './container/about';
 
-// import { makeStyles } from "@mui/styles";
 import './index.css';
-// import './container/about/about.css';
 
 const App = () => {
 
-  // const useStyles = makeStyles({
-  //   root: {},
-  //   mainContainer: {
-  //     background: 'url(src/assets/images/bg-img.jpg) no-repeat center',
-  //     '&.MuiGrid-container': {
-  //       paddingTop: 70,
-  //     }
-  //   }
-  // })
-
-
-  // const [selectedComp, setSelectedComp] = useState(HEADER[0].value);
-  // const classes = useStyles();
   return (
     <>
-        <Grid container maxWidth={'1450px'} marginX='auto' paddingRight={'50px'} paddingLeft={'50px'} >
+        <Grid container maxWidth={'1600px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} >
           <Header />
           <Home />
           <About />

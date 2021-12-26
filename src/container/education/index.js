@@ -4,10 +4,9 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 // import WrapperSection from "../../components/section";
 // import SchoolIcon from '@mui/icons-material/School';
-import { Work } from '@mui/icons-material';
 import { WORD_EXPERIENCE_AND_EDUCATION_TIMELINE } from "../../util";
 import Heading from "../../components/heading";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 const Education = () => {
@@ -39,8 +38,13 @@ const Education = () => {
                         icon={it.icon}
                     >
                         <Box display='flex' alignItems='center' columnGap='12px'>
-                            <Work /><h3 className="vertical-timeline-element-title">{it.title}</h3></Box>
-                        {it.location ? <h4 className="vertical-timeline-element-subtitle">{it.location}</h4> : null}
+                            <img src={require('../../assets/images/axim.jpeg')} alt='company_logo' heigth='40' width='40' />
+                            <Typography variant='h4' >{it.title}</Typography>
+                            {/* <h3 className="vertical-timeline-element-title">{it.title}</h3> */}
+                        </Box>
+                        {it.location ?
+                            <Typography variant='h4' >{it.location} </Typography>
+                            : null}
                         {
                             it.description.length > 0 ? <p>
                                 {it.description}

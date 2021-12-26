@@ -27,12 +27,33 @@ const Skills = () => {
                     ))}
                 </ImageList> */}
                 <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='20px'>
-                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '40px', width: '40px' }} />
-                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '40px', width: '40px' }} />
-                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '40px', width: '40px' }} />
-                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '40px', width: '40px' }} />
-                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '40px', width: '40px' }} />
-                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '40px', width: '40px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+                    <img src={require('../../assets/images/svg/APP/tools.svg')} alt='skills' style={{ height: '100px', width: '100px' }} />
+
                 </Box>
             </Box>
         </Grid>

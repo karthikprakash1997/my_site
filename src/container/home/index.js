@@ -3,10 +3,10 @@ import Typed from "react-typed";
 import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import WrapperSection from "../../components/section";
+// import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
 import AiHeadAnimation from "../../components/aiHead";
-import ParticleAnimation from '../../components/particleAnimation';
+// import ParticleAnimation from '../../components/particleAnimation';
 // import {HomeBg} from '../../assets/images/home-bg.jpg';
 // import HomeCircuitAnimation from "../../components/circuitAnimation/home";
 
@@ -18,7 +18,6 @@ const Home = () => {
             height: '100vh',
             display: 'flex',
             alignItems: 'center',
-            // background: HomeBg,
         },
         profile: {
             borderRadius: 10
@@ -72,52 +71,44 @@ const Home = () => {
                 loop
             />
         )
-    }, []);
+    }, [classes.linearText, classes.gradName]);
     // const particleAnimation = useMemo(() => <ParticleAnimation />, []);
 
     return (
-        <WrapperSection classVariant='section-home'>
-            <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+        // <WrapperSection classVariant='section-home'>
+        <Grid container className={`${classes.sectionHome}`} spacing={2} marginX='auto' paddingTop={'130px'}>
+            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
 
-                    <Box display='flex' flexDirection='column' color='#ffffff'>
-                        <Box>
-                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
-                            <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
-                            {typedAnimation}
+                <Box display='flex' flexDirection='column' color='#ffffff'>
+                    <Box>
+                        <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
+                        <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
+                        {typedAnimation}
+                    </Box>
+                    <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
+                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
+                        <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
+                            <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
                         </Box>
-                        <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
-                            <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
-                            <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
-                                <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                                <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                                <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                            </Box>
-                        </Box>
                     </Box>
-                </Grid>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' position='relative'>
-                    <div className='animated-container'>
-                        {[...Array(200)].map((it, index) => <div class="circle-container" key={index}>
-                            <div class="circle"></div></div>)}
-                    </div>
-                    <Box maxWidth={'80%'}>
-                        {/* <div style={{ padding: '5%' }}>
-                            <div style={{ textAlign: 'center', width: '100%' }}> */}
-                        {/* <AiHeadAnimation /> */}
-                        {/* {particleAnimation} */}
-                        {aiFaceAnimataion}
-                    </Box>
-                    {/* </div> */}
-                    {/* </div> */}
-                </Grid >
-                <Grid item xs={12}>
-                    <Box textAlign='center' fontSize='large' color='#ffffff'>
-                        "Let and Live!"
-                    </Box>
-                </Grid>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' position='relative'>
+                <div className='animated-container'>
+                    {[...Array(200)].map((it, index) => <div class="circle-container" key={index}>
+                        <div class="circle"></div></div>)}
+                </div>
+                {aiFaceAnimataion}
             </Grid >
-        </WrapperSection >
+            <Grid item xs={12}>
+                <Box textAlign='center' fontSize='large' color='#ffffff'>
+                    "Let and Live!"
+                </Box>
+            </Grid>
+        </Grid >
+        // </WrapperSection >
     )
 }
 
