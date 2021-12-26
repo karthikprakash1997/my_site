@@ -21,6 +21,7 @@ const Header = ({ setSelectedComp }) => {
       boxShadow: 'unset',
       height: 70,
       padding: '0 50px',
+      backgroundColor: '#040c18'
     },
     linearText: {
       // background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",

@@ -4,9 +4,7 @@ import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 // import WrapperSection from "../../components/section";
-import { Download } from '@mui/icons-material';
-import { LinkedIn } from '@mui/icons-material';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { Download,LinkedIn,Email,GitHub } from '@mui/icons-material';
 import AiHeadAnimation from "../../components/aiHead";
 // import {HomeBg} from '../../assets/images/home-bg.jpg';
 // import HomeCircuitAnimation from "../../components/circuitAnimation/home";
@@ -50,46 +48,54 @@ const Home = () => {
 
     const classes = useStyles();
 
-    const aiFaceAnimataion = useMemo(()=> <AiHeadAnimation />,[])
+    const aiFaceAnimataion = useMemo(() => <AiHeadAnimation />, [])
 
     return (
         // <WrapperSection classVariant='section-home'>
-            <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
-                    <Box display='flex' flexDirection='column' color='#ffffff'>
-                        <Box>
-                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
-                            <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
-                            <Typed
-                                strings={[
-                                    "Software Developer",
-                                    "Tech Enthusiast",
-                                    "Writer"
-                                ]}
-                                typeSpeed={30}
-                                className={`${classes.linearText} ${classes.gradName}`}
-                                backSpeed={30}
-                                loop
-                            />
-                        </Box>
+        <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
+            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                <Box display='flex' flexDirection='column' color='#ffffff'>
+                    <Box>
+                        <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
+                        <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
+                        <Typed
+                            strings={[
+                                "Software Developer",
+                                "Tech Enthusiast",
+                                "Writer"
+                            ]}
+                            typeSpeed={30}
+                            className={`${classes.linearText} ${classes.gradName}`}
+                            backSpeed={30}
+                            loop
+                        />
+                    </Box>
+                    <Box display='flex' columnGap='20px' marginTop='20px'>
                         <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
                         <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
-                            <GitHubIcon fontSize='large' sx={{ color: 'white' }} />
-                            <LinkedIn fontSize='large' sx={{ color: 'white' }} />
+                            <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
                         </Box>
                     </Box>
-                </Grid>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
-                    <Box maxWidth={'80%'}>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                <Box maxWidth={'80%'}>
                     {/* <div style={{ padding: '5%' }}>
                             <div style={{ textAlign: 'center', width: '100%' }}> */}
                     {/* <AiHeadAnimation /> */}
                     {aiFaceAnimataion}
-                    </Box>
-                    {/* </div> */}
-                    {/* </div> */}
-                </Grid>
+                </Box>
+                {/* </div> */}
+                {/* </div> */}
             </Grid>
+            <Grid item xs={12}>
+                <Box textAlign='center' fontSize='large' color='#ffffff'>
+                    "Let and Live!"
+                </Box>
+            </Grid>
+        </Grid>
         // </WrapperSection >
     )
 }
