@@ -39,7 +39,7 @@ const ContactInfo = () => {
 
     return (
         <>
-            <div className={`${classes.divpadding}`}>
+            <div className={`${classes.divpadding} contact-form`}>
                 <TextField
                     required
                     id="outlined-required"
@@ -64,7 +64,7 @@ const ContactInfo = () => {
                     label="Email"
                     InputProps={{
                         className: `${classes.border} ${classes.textColor}`,
-                        
+
                     }}
                     InputLabelProps={{
                         className: classes.pinkTextColor,
@@ -90,7 +90,7 @@ const ContactInfo = () => {
                     rows={9}
                 />
             </div>
-            <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Send Message   <Send htmlColor='#FE6B8B' /></Button>
+            <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Send Message   <Send htmlColor='#FE6B8B' style={{marginLeft: '10px'}}/></Button>
         </>
     )
 }

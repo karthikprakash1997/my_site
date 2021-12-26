@@ -4,10 +4,11 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 // import WrapperSection from "../../components/section";
 // import SchoolIcon from '@mui/icons-material/School';
-// import WorkIcon from '@mui/icons-material/Work';
+import { Work } from '@mui/icons-material';
 import { WORD_EXPERIENCE_AND_EDUCATION_TIMELINE } from "../../util";
 import Heading from "../../components/heading";
 import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
 
 const Education = () => {
 
@@ -25,8 +26,8 @@ const Education = () => {
     // const classes = useStyles();
     return (
         <Grid container marginTop={'150px'}>
-        {/* // <WrapperSection classVariant={`${classes.sectionEducation} education-exp`}> */}
-                <Heading heading={"My Journey"} />
+            {/* // <WrapperSection classVariant={`${classes.sectionEducation} education-exp`}> */}
+            <Heading heading={"My Journey"} />
             <VerticalTimeline>
                 {WORD_EXPERIENCE_AND_EDUCATION_TIMELINE.map((it) => (
                     <VerticalTimelineElement
@@ -37,11 +38,15 @@ const Education = () => {
                         iconStyle={it.iconStyle}
                         icon={it.icon}
                     >
-                        <h3 className="vertical-timeline-element-title">{it.title}</h3>
-                        <h4 className="vertical-timeline-element-subtitle">{it.location}</h4>
-                        <p>
-                            {it.description}
-                        </p>
+                        <Box display='flex' alignItems='center' columnGap='12px'>
+                            <Work /><h3 className="vertical-timeline-element-title">{it.title}</h3></Box>
+                        {it.location ? <h4 className="vertical-timeline-element-subtitle">{it.location}</h4> : null}
+                        {
+                            it.description.length > 0 ? <p>
+                                {it.description}
+                            </p> : null
+                        }
+
                     </VerticalTimelineElement>
 
                 ))}
@@ -109,7 +114,7 @@ const Education = () => {
                 </p>
             </VerticalTimelineElement> */}
             </VerticalTimeline>
-        {/* // </WrapperSection> */}
+            {/* // </WrapperSection> */}
         </Grid>
     )
 }

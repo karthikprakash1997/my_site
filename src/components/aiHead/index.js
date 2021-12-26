@@ -3,7 +3,7 @@
 import React from "react";
 
 const AiHeadAnimation = () => (
-    <><svg width="560" height="560" viewBox="0 0 713 713" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <><svg className="ai-home-animation" width="560" height="560" viewBox="0 0 713 713" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_f_5_2)">
             <circle cx="356.5" cy="356.5" r="142.5" fill="#0F6BCD" />
         </g>

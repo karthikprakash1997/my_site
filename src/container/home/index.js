@@ -3,7 +3,7 @@ import Typed from "react-typed";
 import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-// import WrapperSection from "../../components/section";
+import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
 import AiHeadAnimation from "../../components/aiHead";
 import ParticleAnimation from '../../components/particleAnimation';
@@ -26,6 +26,9 @@ const Home = () => {
         profileName: {
             fontSize: '75px !important',
             fontWeight: '800px !important',
+            '@media (max-width:576px)': {
+                fontSize: '34px !important'
+            }
         },
         gradName: {
             fontSize: 20,
@@ -44,7 +47,12 @@ const Home = () => {
             marginTop: '20px !important',
             padding: '8px !important'
         },
-
+        csvHldr: {
+            '@media(max-width: 576px)': {
+                flexDirection: 'column',
+                alignItems: 'flex-start',
+            }
+        }
     })
 
     const classes = useStyles();
@@ -68,43 +76,43 @@ const Home = () => {
     // const particleAnimation = useMemo(() => <ParticleAnimation />, []);
 
     return (
-        // <WrapperSection classVariant='section-home'>
-        <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
-            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
-                <Box display='flex' flexDirection='column' color='#ffffff'>
-                    <Box>
-                        <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
-                        <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
-                        {typedAnimation}
-                    </Box>
-                    <Box display='flex' columnGap='20px' marginTop='20px'>
-                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
-                        <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
-                            <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                            <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                            <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
+        <WrapperSection classVariant='section-home'>
+            <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
+                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                    <Box display='flex' flexDirection='column' color='#ffffff'>
+                        <Box>
+                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
+                            <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
+                            {typedAnimation}
+                        </Box>
+                        <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
+                            <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
+                            <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
+                                <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                                <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                                <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            </Box>
                         </Box>
                     </Box>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
-                <Box maxWidth={'80%'}>
-                    {/* <div style={{ padding: '5%' }}>
+                </Grid>
+                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                    <Box maxWidth={'80%'}>
+                        {/* <div style={{ padding: '5%' }}>
                             <div style={{ textAlign: 'center', width: '100%' }}> */}
-                    {/* <AiHeadAnimation /> */}
-                    {/* {particleAnimation} */}
-                    {aiFaceAnimataion}
-                </Box>
-                {/* </div> */}
-                {/* </div> */}
+                        {/* <AiHeadAnimation /> */}
+                        {/* {particleAnimation} */}
+                        {aiFaceAnimataion}
+                    </Box>
+                    {/* </div> */}
+                    {/* </div> */}
+                </Grid >
+                <Grid item xs={12}>
+                    <Box textAlign='center' fontSize='large' color='#ffffff'>
+                        "Let and Live!"
+                    </Box>
+                </Grid>
             </Grid >
-            <Grid item xs={12}>
-                <Box textAlign='center' fontSize='large' color='#ffffff'>
-                    "Let and Live!"
-                </Box>
-            </Grid>
-        </Grid >
-        // </WrapperSection >
+        </WrapperSection >
     )
 }
 
