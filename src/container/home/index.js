@@ -79,6 +79,7 @@ const Home = () => {
         <WrapperSection classVariant='section-home'>
             <Grid container spacing={2} marginX='auto' paddingTop={'130px'}>
                 <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+
                     <Box display='flex' flexDirection='column' color='#ffffff'>
                         <Box>
                             <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
@@ -95,7 +96,11 @@ const Home = () => {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' position='relative'>
+                    <div className='animated-container'>
+                        {[...Array(200)].map((it, index) => <div class="circle-container" key={index}>
+                            <div class="circle"></div></div>)}
+                    </div>
                     <Box maxWidth={'80%'}>
                         {/* <div style={{ padding: '5%' }}>
                             <div style={{ textAlign: 'center', width: '100%' }}> */}

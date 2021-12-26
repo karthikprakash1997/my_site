@@ -15,7 +15,7 @@ const About = () => {
     },
     profile: {
       borderRadius: 10,
-      '@media(max-width: 1199px)': {
+      '@media(max-width: 1440px)': {
         width: '100% !important'
       },
       '@media(max-width: 992px)': {
