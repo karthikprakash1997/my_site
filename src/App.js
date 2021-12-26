@@ -31,7 +31,7 @@ const App = () => {
   // const classes = useStyles();
   return (
     <>
-        <Grid container maxWidth={'1400px'} marginX='auto' paddingRight={'50px'} paddingLeft={'50px'} >
+        <Grid container maxWidth={'1450px'} marginX='auto' paddingRight={'50px'} paddingLeft={'50px'} >
           <Header />
           <Home />
           <About />

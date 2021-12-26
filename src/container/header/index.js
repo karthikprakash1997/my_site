@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { HEADER } from '../../util';
 import { makeStyles } from '@mui/styles';
-import { Box, Drawer, IconButton, List, ListItem } from '@mui/material';
-import { Menu } from '@mui/icons-material';
+import { Box, IconButton, MenuItem, Menu, Typography, Fade } from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Header = ({ setSelectedComp }) => {
 
@@ -22,11 +23,6 @@ const Header = ({ setSelectedComp }) => {
       height: 70,
       padding: '0 50px',
     },
-    linearText: {
-      // background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-      // WebkitBackgroundClip: "text",
-      // WebkitTextFillColor: "white",
-    },
     menu: {
       display: 'flex',
       alignItems: 'center',
@@ -42,12 +38,13 @@ const Header = ({ setSelectedComp }) => {
       textDecoration: 'none',
       display: 'inline-block'
     },
-    csvBtn: {
-      height: 44,
-      fontWeight: 'bold'
+    background: {
+      background: 'radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%)',
+      color:'white'
     },
     burgerMenu: {
       height: 40,
+      // background:'white',
       width: 40,
       '& svg': {
         height: 40,
@@ -58,46 +55,41 @@ const Header = ({ setSelectedComp }) => {
 
   const classes = useStyles();
 
-  const [isDrawerOpen, setDrawer] = useState(false);
+  // const [isDrawerOpen, setDrawer] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClose = () => setAnchorEl(null);
+  const handleOpen = (event) => setAnchorEl(event.currentTarget);
+
   return (
-    <header className={`header ${classes.header} ${classes.linearText}`}>
-      <IconButton className={`${classes.burgerMenu} burger-menu`} color='inherit' edge='end' onClick={() => setDrawer(!isDrawerOpen)}>
-        <Menu />
-      </IconButton>
+    <header className={`header ${classes.header} `}>
       <Box className={`header-hldr`} display='flex' alignItems='center' marginLeft='auto'>
-        <div className={`header-sidebar`}>
-          <div className="top-menu">
-            <div className="top-menu-nav">
-              <div className="menu-topmenu-container">
-                <ul id="menu-main-menu" className={`${classes.menu}`}>
-                  {HEADER.map((it, index) => (
-                    <li id={`menu-item-5${index}`} className={`${classes.menuItem}`} onClick={() => setSelectedComp(it.value)}>
-                      <span style={{ cursor: 'pointer' }} className="animated-button"><span>{it.title}</span></span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ul id="menu-main-menu" className={`${classes.menu}`}>
+          {HEADER.map((it, index) => (
+            <li id={`menu-item-5${index}`} className={`${classes.menuItem}`} onClick={() => setSelectedComp(it.value)}>
+              <Typography fontWeight={600} color='whitesmoke'>{it.title}</Typography>
+            </li>
+          ))}
+        </ul>
       </Box >
-      <Drawer
-        sx={{
-          width: '300px',
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: '300px'
-          }
+      <IconButton className={`${classes.burgerMenu} burger-menu`} edge='end' onClick={handleOpen}>
+        {Boolean(anchorEl) ? <CloseIcon sx={{ color: 'white' }}/> : <MenuIcon sx={{ color: 'white' }} />}
+      </IconButton>
+      <Menu
+        id="basic-menu"
+        // style={{backgroundColor: 'red', color: 'white'}}
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        classes={{ paper: classes.background }}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
         }}
-        anchor='left'
-        open={isDrawerOpen}
-        onClose={() => setDrawer(false)}
+        TransitionComponent={Fade}
       >
-        <List>
-          {['Home', 'About', 'Education & Experience', 'Skills', 'Projects', 'Contact'].map((it) =>
-            <ListItem button key={`drawer-${it}`}>{it}</ListItem>)}
-        </List>
-      </Drawer>
+        {['Home', 'About', 'Education & Experience', 'Skills', 'Projects', 'Contact'].map((it) =>
+          <MenuItem onClick={handleClose}>{it}</MenuItem>)}
+      </Menu>
     </header >
   );
 }
