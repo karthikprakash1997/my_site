@@ -5,6 +5,7 @@ const ParticleAnimation = () => {
     return (
         <Particles
             id="tsparticles"
+            container={'box'}
             options={{
                 particles: {
                     color: {

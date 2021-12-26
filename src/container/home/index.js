@@ -4,8 +4,9 @@ import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 // import WrapperSection from "../../components/section";
-import { Download,LinkedIn,Email,GitHub } from '@mui/icons-material';
+import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
 import AiHeadAnimation from "../../components/aiHead";
+import ParticleAnimation from '../../components/particleAnimation';
 // import {HomeBg} from '../../assets/images/home-bg.jpg';
 // import HomeCircuitAnimation from "../../components/circuitAnimation/home";
 
@@ -48,7 +49,23 @@ const Home = () => {
 
     const classes = useStyles();
 
-    const aiFaceAnimataion = useMemo(() => <AiHeadAnimation />, [])
+    const aiFaceAnimataion = useMemo(() => <AiHeadAnimation />, []);
+    const typedAnimation = useMemo(() => {
+        return (
+            <Typed
+                strings={[
+                    "Software Developer",
+                    "Tech Enthusiast",
+                    "Writer"
+                ]}
+                typeSpeed={30}
+                className={`${classes.linearText} ${classes.gradName}`}
+                backSpeed={30}
+                loop
+            />
+        )
+    }, []);
+    // const particleAnimation = useMemo(() => <ParticleAnimation />, []);
 
     return (
         // <WrapperSection classVariant='section-home'>
@@ -58,17 +75,7 @@ const Home = () => {
                     <Box>
                         <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
                         <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
-                        <Typed
-                            strings={[
-                                "Software Developer",
-                                "Tech Enthusiast",
-                                "Writer"
-                            ]}
-                            typeSpeed={30}
-                            className={`${classes.linearText} ${classes.gradName}`}
-                            backSpeed={30}
-                            loop
-                        />
+                        {typedAnimation}
                     </Box>
                     <Box display='flex' columnGap='20px' marginTop='20px'>
                         <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
@@ -85,17 +92,18 @@ const Home = () => {
                     {/* <div style={{ padding: '5%' }}>
                             <div style={{ textAlign: 'center', width: '100%' }}> */}
                     {/* <AiHeadAnimation /> */}
+                    {/* {particleAnimation} */}
                     {aiFaceAnimataion}
                 </Box>
                 {/* </div> */}
                 {/* </div> */}
-            </Grid>
+            </Grid >
             <Grid item xs={12}>
                 <Box textAlign='center' fontSize='large' color='#ffffff'>
                     "Let and Live!"
                 </Box>
             </Grid>
-        </Grid>
+        </Grid >
         // </WrapperSection >
     )
 }
