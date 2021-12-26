@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 import Header from './container/header';
 import Home from './container/home';
 import Education from "./container/education";
-// import Skills from "./container/skills";
+import Skills from "./container/skills";
 import Contact from "./container/contact";
 import Projects from "./container/projects";
 import Footer from "./container/footer";
@@ -36,7 +36,7 @@ const App = () => {
           <Home />
           <About />
           <Education />
-          <About />
+          <Skills />
           <Projects />
           <Contact />
           <Footer />

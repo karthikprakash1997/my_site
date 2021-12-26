@@ -1,71 +1,70 @@
-import React from "react";
-import Grid from '@mui/material/Grid';
+import React from 'react';
 import { makeStyles } from "@mui/styles";
-import { LazyMotion, domAnimation } from "framer-motion"
-import { Javascript, LinkedIn, Twitter, Facebook, WhatsApp } from '@mui/icons-material';
-import { Box } from "@mui/system";
-import WrapperSection from "../../components/section";
+import { Grid } from '@mui/material';
+// import { Box } from "@mui/system";
+// import Feature from '../../components/feature';
+import Heading from '../../components/heading';
+// import C from '../../assets/images/svg/programmingLang/c.svg';
+
 
 
 const Skills = () => {
-
     const useStyles = makeStyles({
-        'mt-100': {
-            marginTop: 100
+        sectionAbout: {
+            width: '100%',
+            height: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: '#F8F9F9',
+        },
+        profile: {
+            borderRadius: 10
+        },
+        profileName: {
+            fontSize: 48,
+            color: 'transparent',
+            WebkitTextStroke: '1px #ffffff',
+            textTransform: 'uppercase',
+            fontWeight: 700
+        },
+        role: {
+            fontSize: 36,
+            fontWeight: 700
+        },
+        linearText: {
+            background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+        },
+        'pt-0': {
+            paddingTop: 0
+        },
+        textIndent: {
+            textIndent: 36
         }
     })
 
     const classes = useStyles();
 
     return (
-        <WrapperSection classVariant={`${classes.sectionAbout} about-section`}>
-            <Grid container spacing={2} maxWidth='lg' marginX='auto'>
-                <div class={`titles ${classes['mt-100']}`} style={{ textAlign: 'center', width: '100%', paddingTop: '5%' }}>
-                    <h2 class="title"><div className='inner-txt'> Skills</div></h2>
-                    {/* <div class="subtitle"><span> My Story </span></div> */}
-                </div>
-                {[1].map((it) =>
-                    <Grid item xs={12} sm={12} key={it} display='flex' justifyContent='center'>
-                        <LazyMotion features={domAnimation}>
-                            {/* <m.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            whileHover={{
-                                scale: 1.1,
-                            }}
-                            exit={{ opacity: 0 }} >
-                            <Card >
-                                <CardContent>
-                                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                        Word of the Day
-                                    </Typography>
 
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                        adjective
-                                    </Typography>
-                                    <Typography variant="body2">
-                                        well meaning and kindly.
-                                        <br />
-                                        {'"a benevolent smile"'}
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">Learn More</Button>
-                                </CardActions>
-                            </Card>
-                        </m.div> */}
-                            <Box className='skill-list' display='flex' alignItems='center' justifyContent='between'>
-                                <Javascript fontSize='large' />
-                                <Twitter fontSize='large' />
-                                <Facebook fontSize='large' />
-                                <LinkedIn fontSize='large' />
-                                <WhatsApp fontSize='large' />
-                            </Box>
-                        </LazyMotion>
-                    </Grid>
-                )}
+        <Grid container className='card__layout' marginTop={'150px'} >
+            <Heading heading="My Skills" isSecondary />
+            <Grid container spacing={2}>
+                {/* <ImageList >
+                    {itemData.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                                srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList> */}
             </Grid>
-        </WrapperSection>
+        </Grid>
     )
 }
 export default Skills;
