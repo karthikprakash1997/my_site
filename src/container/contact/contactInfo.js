@@ -20,11 +20,20 @@ const ContactInfo = () => {
         divpadding: {
             paddingBottom: 'inherit'
         },
-        border :{
+        border: {
             '&.Mui-focused fieldset': {
                 borderColor: '#FE6B8B !important',
             }
-        }
+        },
+        textColor: {
+            color: 'white',
+            '&::placeholder': {
+                color: 'white',
+            }
+        },
+        pinkTextColor: {
+            color: '#FE6B8B !important',
+        },
     })
     const classes = useStyles();
 
@@ -36,7 +45,12 @@ const ContactInfo = () => {
                     id="outlined-required"
                     fullWidth
                     label="Full Name"
-                    className={`${classes.border}`}
+                    InputProps={{
+                        className: `${classes.border} ${classes.textColor}`,
+                    }}
+                    InputLabelProps={{
+                        className: classes.pinkTextColor,
+                    }}
                     focused
                     placeholder="Please enter your name"
 
@@ -48,7 +62,13 @@ const ContactInfo = () => {
                     fullWidth
                     id="outlined-required"
                     label="Email"
-                    // color="secondary"
+                    InputProps={{
+                        className: `${classes.border} ${classes.textColor}`,
+                        
+                    }}
+                    InputLabelProps={{
+                        className: classes.pinkTextColor,
+                    }}
                     focused
                     placeholder="Please enter your email id"
                 />
@@ -57,6 +77,12 @@ const ContactInfo = () => {
                 <TextField
                     id="outlined-multiline-static"
                     label="Description"
+                    InputProps={{
+                        className: `${classes.border} ${classes.textColor}`
+                    }}
+                    InputLabelProps={{
+                        className: classes.pinkTextColor,
+                    }}
                     multiline
                     fullWidth
                     focused
