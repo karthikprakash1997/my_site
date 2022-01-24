@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from "@mui/styles";
 import { Grid, Typography, List, ListItem } from '@mui/material';
 import { Box } from "@mui/system";
-// import Feature from '../../components/feature';
 import Heading from '../../components/heading';
 
 const About = () => {
@@ -50,7 +49,6 @@ const About = () => {
   const classes = useStyles();
 
   return (
-
     <Grid container className='card__layout' marginTop={'150px'} >
       <Grid item className='w-100'>
         <Heading heading="My Story" isSecondary />
@@ -59,7 +57,7 @@ const About = () => {
       <Grid container spacing={2} justifyContent='center' width='unset'>
         <Grid item xs={12} md={4} >
           <img
-            src={require("../../assets/images/png/myself/2.jpg")}
+            src={require("../../assets/images/myself/2.jpg")}
             style={{ height: "450px", width: '400px' }}
             alt="achivemens"
             className={`${classes.profile}`}

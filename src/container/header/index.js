@@ -56,7 +56,6 @@ const Header = ({ setSelectedComp }) => {
 
   const classes = useStyles();
 
-  // const [isDrawerOpen, setDrawer] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClose = () => setAnchorEl(null);
@@ -78,7 +77,6 @@ const Header = ({ setSelectedComp }) => {
       </IconButton>
       <Menu
         id="basic-menu"
-        // style={{backgroundColor: 'red', color: 'white'}}
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         classes={{ paper: classes.background }}

@@ -66,7 +66,7 @@ code {
 }
 
 .title .inner-txt {
-  background     : url(./assets/images/brush-paint.svg) no-repeat center;
+  /* background     : url(./assets/images/brush-paint.svg) no-repeat center; */
   color          : #ffffff;
   background-size: contain;
 }
