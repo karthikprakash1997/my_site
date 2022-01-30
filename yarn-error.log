@@ -1,5 +1,5 @@
 Arguments: 
-  /home/aximsoft/.nvm/versions/node/v14.18.1/bin/node /home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs add react-map-gl @^5.2.7
+  /home/aximsoft/.nvm/versions/node/v14.18.1/bin/node /home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs deploy
 
 PATH: 
   /home/aximsoft/.nvm/versions/node/v14.18.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,17 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@%5E5.2.7: Request "https://registry.yarnpkg.com/@%5E5.2.7" returned a 405
-      at Request.params.callback [as _callback] (/home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:78527:18)
-      at Request.self.callback (/home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:135160:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (/home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:136132:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (/home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:136054:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1334:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  SyntaxError: /home/aximsoft/Desktop/karthik_prakash/per/my_site/package.json: Unexpected token } in JSON at position 908
+      at JSON.parse (<anonymous>)
+      at /home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:1098:57
+      at Generator.next (<anonymous>)
+      at step (/home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:310:30)
+      at /home/aximsoft/.yarn/releases/yarn-1.23.0-20210726.1745.cjs:321:13
 
 npm manifest: 
   {
@@ -47,17 +42,14 @@ npm manifest:
       "@testing-library/user-event": "^7.1.2",
       "animate.css": "^4.1.1",
       "axios": "^0.19.2",
-      "bootstrap": "^4.4.1",
       "font-awesome": "^4.7.0",
       "gh-pages": "^3.2.3",
-      "mapbox-gl": "^2.6.1",
       "react": "^16.12.0",
       "react-dom": "^16.12.0",
       "react-map-gl": "^5.2.7",
       "react-scripts": "3.3.0",
       "react-typed": "^1.2.0",
       "react-vertical-timeline-component": "^3.3.3",
-      "worker-loader": "^3.0.8"
     },
     "scripts": {
       "start": "react-scripts start",
