@@ -18,6 +18,13 @@ export const VIW_POINT = {
     zoom: 12,
 };
 
+export const INITIAL_SNACKBAR = {
+    isOpen: false,
+    severity: 'success',
+    message: '',
+    autoHideDuration:null
+}
+
 export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '2011 - present',

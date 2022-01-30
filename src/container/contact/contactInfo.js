@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Snackbar, Alert } from "@mui/material";
 import { Send } from '@mui/icons-material';
 import emailjs from '@emailjs/browser';
+import { INITIAL_SNACKBAR } from "../../util";
 
 const ContactInfo = () => {
     const useStyles = makeStyles({
@@ -42,9 +43,16 @@ const ContactInfo = () => {
         name: '',
         email: '',
         message: ''
-    })
+    });
+    const [snackbar, setSnackbar] = useState(INITIAL_SNACKBAR)
 
-    const handleClick = () => {
+    const handleMail = () => {
+        setSnackbar({
+            isOpen: true,
+            severity: 'info',
+            message: `Please Wait....`,
+            autoHideDuration: null
+        })
         const template_params = {
             email_id: typedValue.email,
             from_name: typedValue.name,
@@ -59,20 +67,42 @@ const ContactInfo = () => {
                 template_params,
                 "user_F2cdrJa3K8XvhmWY0QLNh"
             )
-            .then( (res) => {
-                console.log(res, 'res')
-                // setSnackBarOpen(true);
-                // setSnackBarError(false);
-                // setOpen(false);
-                // setIsLoading(false);
+            .then(() => {
+                setSnackbar({
+                    isOpen: true,
+                    severity: 'success',
+                    message: `Thanks for contacting, will get back to you soon`,
+                    autoHideDuration: 3000
+                })
             })
-            .catch((res) => {
-                console.log(res, 'err')
-                // setSnackBarOpen(true);
-                // setSnackBarError(false);
-                // setOpen(false);
-                // setIsLoading(false);
+            .catch(() => {
+                setSnackbar({
+                    isOpen: true,
+                    severity: 'error',
+                    message: `!Oops something went wrong please try gain`,
+                    autoHideDuration: 3000
+                })
             });
+    }
+
+    const validateEmail = (email) => {
+        const regex = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+        return email.match(regex);
+    };
+
+    const handleClick = () => {
+
+        const isInValid = !validateEmail(typedValue.email) || !typedValue.name
+        if (isInValid) {
+            setSnackbar({
+                isOpen: true,
+                severity: 'error',
+                message: `Please enter a valid ${!typedValue.name ? 'name' : 'email'}`
+            })
+        } else {
+            handleMail()
+        }
+
     }
 
     return (
@@ -133,7 +163,16 @@ const ContactInfo = () => {
                     value={typedValue.message}
                 />
             </div>
-            <Button onClick={handleClick} variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Send Message   <Send htmlColor='#FE6B8B' style={{ marginLeft: '10px' }} /></Button>
+            <Button onClick={handleClick} variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>
+                Send Message
+                <Send htmlColor='#FE6B8B' style={{ marginLeft: '10px' }} />
+            </Button>
+
+            <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={snackbar.isOpen} autoHideDuration={snackbar.autoHideDuration} onClose={() => setSnackbar(INITIAL_SNACKBAR)}>
+                <Alert onClose={() => setSnackbar(INITIAL_SNACKBAR)} severity={snackbar.severity} sx={{ width: '100%' }}>
+                    {snackbar.message}
+                </Alert>
+            </Snackbar>
         </>
     )
 }
