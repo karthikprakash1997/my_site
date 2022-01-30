@@ -37,7 +37,7 @@ const Projects = ({ myref }) => {
     const classes = useStyles();
     return (
         <Grid ref={myref} container marginTop={'150px'}>
-            <Heading heading={"My Work"} />
+            <Heading heading="My Works" />
             {[...new Array(5)].map((_1, index) => (
                 <Box paddingBottom={'20px'} key={index}>
                     <Box className={`project-hldr ${classes.projects} ${index % 2 ? classes.pinkBackGround : classes.whiteBackGround}`} paddingX={'30px'} paddingY={'30px'}>

@@ -53,8 +53,8 @@ const App = () => {
         <Skills myref={skillref} />
         <Projects myref={projectsref} />
         <Contact myref={contatcsref} />
-        <Footer />
       </Grid>
+      <Footer />
     </>
   )
 }

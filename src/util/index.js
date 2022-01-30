@@ -12,6 +12,12 @@ export const HEADER = [
     { title: 'Contact', value: 'contact' },
 ]
 
+export const VIW_POINT = {
+    latitude: 11.006464,
+    longitude: 76.945765,
+    zoom: 12,
+};
+
 export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
     date: '2011 - present',
@@ -42,7 +48,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     title: 'Intern',
     location: '',
     description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)',  color: 'rgba(0, 0, 0, 0.87)' },
+    contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 },
 {

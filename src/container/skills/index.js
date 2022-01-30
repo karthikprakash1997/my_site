@@ -13,7 +13,7 @@ import { ReactComponent as Css } from '../../assets/images/programming-lang/css.
 const Skills = ({ myref }) => {
     return (
         <Grid ref={myref} container className='card__layout' marginTop={'150px'} >
-            <Heading heading="My Skills" isSecondary />
+            <Heading heading="Tech Stack" isSecondary />
             <Box className='w-100'>
                 <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='20px'>
                     <JS />

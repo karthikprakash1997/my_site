@@ -71,9 +71,18 @@ code {
   background-size: contain;
 }
 
-/* p {
-  color: rgba(0, 0, 0, 0.87) !important;
-} */
+.mapMarkerStyle {
+  background-color: #ff69b4;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  left: -0.5rem;
+  top: -0.5rem;
+  position: relative;
+  border-radius: 1.5rem 1.5rem 0;
+  transform: rotate(45deg);
+  border: 1px solid #ffffff;
+}
 
 .vertical-timeline-element-content {
   background    : #eeeeee !important;

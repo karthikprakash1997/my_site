@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
-import { LinkedIn } from '@mui/icons-material';
+import { LinkedIn, Email } from '@mui/icons-material';
 import { Box } from "@mui/system";
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -15,11 +15,12 @@ const Footer = () => {
 			width: '100%',
 			zIndex: 100,
 			// borderRadius: 'unset',
-			// display: 'flex',
-			// justifyContent: 'space-between',
-			// alignItems: 'center',
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center',
 			// boxShadow: 'unset',
-			height: 70,
+			background: 'linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%)',
+			height: 90,
 			padding: '0 50px',
 		},
 		linearText: {
@@ -35,7 +36,11 @@ const Footer = () => {
 			<Box className='skill-list' display='flex' alignItems='center' justifyContent='center'>
 				<GitHubIcon fontSize='large' sx={{ color: 'white' }} />
 				<LinkedIn fontSize='large' sx={{ color: 'white' }} />
+				<Email fontSize='large' sx={{ color: 'white' }} />
 			</Box>
+			{/* <Box textAlign='center' fontSize='large' color='#ffffff'  display='flex' alignItems='center' justifyContent='center'>
+				Karthik Prakash
+			</Box> */}
 		</footer>
 	)
 };
