@@ -31,7 +31,8 @@ const Header = ({ handleScroll }) => {
       margin: 'unset'
     },
     menuItem: {
-      padding: '0 20px'
+      padding: '0 20px',
+      cursor:'pointer'
     },
     logoLink: {
       maxWidth: 'unset',

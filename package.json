@@ -18,17 +18,14 @@
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^4.1.1",
     "axios": "^0.19.2",
-    "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "gh-pages": "^3.2.3",
-    "mapbox-gl": "^2.6.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-map-gl": "^6.1.19",
+    "react-map-gl": "^5.2.7",
     "react-scripts": "3.3.0",
     "react-typed": "^1.2.0",
     "react-vertical-timeline-component": "^3.3.3",
-    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
