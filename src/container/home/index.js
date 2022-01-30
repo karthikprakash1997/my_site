@@ -1,18 +1,17 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Typed from "react-typed";
 import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import WrapperSection from "../../components/section";
+// import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
-import AiHeadAnimation from "../../components/aiHead";
 
-const Home = () => {
+const Home = ({ myref }) => {
 
     const useStyles = makeStyles({
         sectionHome: {
             width: '100%',
-            height: '100vh',
+            height: '90vh',
             display: 'flex',
             alignItems: 'center',
         },
@@ -32,7 +31,6 @@ const Home = () => {
         },
         linearText: {
             background: "-webkit-linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%)",
-            // background:'#FE6B8B',
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
         },
@@ -53,58 +51,66 @@ const Home = () => {
 
     const classes = useStyles();
 
-    const aiFaceAnimataion = useMemo(() => <AiHeadAnimation />, []);
-    const typedAnimation = useMemo(() => {
-        return (
-            <Typed
-                strings={[
-                    "Software Developer",
-                    "Tech Enthusiast",
-                    "Writer"
-                ]}
-                typeSpeed={30}
-                className={`${classes.linearText} ${classes.gradName}`}
-                backSpeed={30}
-                loop
-            />
-        )
-    }, [classes.linearText, classes.gradName]);
+    // const typedAnimation = useMemo(() => {
+    //     return (
+    //         <Typed
+    //             strings={[
+    //                 "Software Developer",
+    //                 "Tech Enthusiast",
+    //                 "Writer"
+    //             ]}
+    //             typeSpeed={30}
+    //             className={`${classes.linearText} ${classes.gradName}`}
+    //             backSpeed={30}
+    //             loop
+    //         />
+    //     )
+    // }, [classes.linearText, classes.gradName]);
 
     return (
-        <WrapperSection classVariant='section-home'>
-            <Grid container className={`${classes.sectionHome}`} spacing={2} marginX='auto' paddingTop={'130px'}>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
+        // <WrapperSection classVariant='section-home'>
+        <Grid ref={myref} container className={`${classes.sectionHome}`} spacing={2} marginX='auto' paddingTop={'130px'}>
+            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
 
-                    <Box display='flex' flexDirection='column' color='#ffffff'>
-                        <Box>
-                            <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
-                            <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
-                            {typedAnimation}
-                        </Box>
-                        <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
-                            <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
-                            <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
-                                <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                                <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                                <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                            </Box>
+                <Box display='flex' flexDirection='column' color='#ffffff'>
+                    <Box>
+                        <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
+                        <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
+                        <Typed
+                            strings={[
+                                "Software Developer",
+                                "Tech Enthusiast",
+                                "Writer"
+                            ]}
+                            typeSpeed={30}
+                            className={`${classes.linearText} ${classes.gradName}`}
+                            backSpeed={30}
+                            loop
+                        />
+                    </Box>
+                    <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
+                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
+                        <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
+                            <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
                         </Box>
                     </Box>
-                </Grid>
-                <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' position='relative'>
-                    <div className='animated-container'>
-                        {[...Array(200)].map((it, index) => <div class="circle-container" key={index}>
-                            <div class="circle"></div></div>)}
-                    </div>
-                    {aiFaceAnimataion}
-                </Grid >
-                <Grid item xs={12}>
-                    <Box textAlign='center' fontSize='large' color='#ffffff'>
+                    <Box textAlign='center' fontSize='large' color='#ffffff' display='flex' columnGap='20px' marginTop='20px'>
                         "Let and Live!"
                     </Box>
-                </Grid>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' >
+                <div className='animated-container'>
+                    {[...Array(200)].map((it, index) => <div className="circle-container" key={index}>
+                        <div className="circle"></div></div>)}
+                </div>
+                <img src={require('../../assets/ai_head.png')} alt='Ai Head'  width="100%" height="100%"  />
+                {/* <AiHeadAnimation /> */}
             </Grid >
-        </WrapperSection >
+        </Grid >
+        // </WrapperSection >
     )
 }
 

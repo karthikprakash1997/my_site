@@ -6,7 +6,7 @@ import { Typography, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Heading from "../../components/heading";
 
-const Projects = () => {
+const Projects = ({ myref }) => {
     const useStyles = makeStyles({
         projects: {
             display: 'flex',
@@ -36,34 +36,34 @@ const Projects = () => {
 
     const classes = useStyles();
     return (
-        <Grid container marginTop={'150px'}>
-                <Heading heading={"My Work"} />
-                {[...new Array(5)].map((_1, index) => (
-                    <Box paddingBottom={'20px'}>
-                        <Box className={`project-hldr ${classes.projects} ${index % 2 ? classes.pinkBackGround : classes.whiteBackGround}`} paddingX={'30px'} paddingY={'30px'}>
-                            <img className={`${classes.proImg}`} src={require('../../assets/images/study.svg')} alt="projects" />
-                            <div>
-                                <Box whiteSpace='nowrap'>
-                                    <Box display={'inline'}>Date:</Box>
-                                    <Box>Dec 19 2021</Box>
-                                </Box>
-                                <Box whiteSpace='nowrap' mt='12px'>
-                                    <Box display={'inline'}>Category:</Box>
-                                    <Box>Dec 19 2021</Box>
-                                </Box>
-                            </div>
-                            <div>
-                                <Typography variant="h3">IOT</Typography>
-                                <Typography textAlign={'justify'}>
-                                    Duis occaecat irure labore veniam id fugiat consequat tempor amet consectetur cillum voluptate. Sint aliquip non officia veniam excepteur. Do amet et tempor sit enim.
-                                    Reprehenderit reprehenderit minim velit nulla. Nostrud consequat in mollit quis cupidatat nisi. Velit fugiat nulla anim aliquip dolor laboris non amet ad esse irure consectetur. Ut nisi duis do laboris deserunt exercitation elit
-                                    est laborum elit dolore adipisicing fugiat. Esse officia deserunt pariatur nulla in duis amet dolore culpa cillum esse magna.
-                                </Typography>
-                            </div>
-                        </Box>
+        <Grid ref={myref} container marginTop={'150px'}>
+            <Heading heading={"My Work"} />
+            {[...new Array(5)].map((_1, index) => (
+                <Box paddingBottom={'20px'} key={index}>
+                    <Box className={`project-hldr ${classes.projects} ${index % 2 ? classes.pinkBackGround : classes.whiteBackGround}`} paddingX={'30px'} paddingY={'30px'}>
+                        <img className={`${classes.proImg}`} src={require('../../assets/images/study.svg')} alt="projects" />
+                        <div>
+                            <Box whiteSpace='nowrap'>
+                                <Box display={'inline'}>Date:</Box>
+                                <Box>Dec 19 2021</Box>
+                            </Box>
+                            <Box whiteSpace='nowrap' mt='12px'>
+                                <Box display={'inline'}>Category:</Box>
+                                <Box>Dec 19 2021</Box>
+                            </Box>
+                        </div>
+                        <div>
+                            <Typography variant="h3">IOT</Typography>
+                            <Typography textAlign={'justify'}>
+                                Duis occaecat irure labore veniam id fugiat consequat tempor amet consectetur cillum voluptate. Sint aliquip non officia veniam excepteur. Do amet et tempor sit enim.
+                                Reprehenderit reprehenderit minim velit nulla. Nostrud consequat in mollit quis cupidatat nisi. Velit fugiat nulla anim aliquip dolor laboris non amet ad esse irure consectetur. Ut nisi duis do laboris deserunt exercitation elit
+                                est laborum elit dolore adipisicing fugiat. Esse officia deserunt pariatur nulla in duis amet dolore culpa cillum esse magna.
+                            </Typography>
+                        </div>
                     </Box>
-                ))}
-            </Grid>
+                </Box>
+            ))}
+        </Grid>
     )
 }
 

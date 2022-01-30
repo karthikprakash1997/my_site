@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import { Button, TextField } from "@mui/material";
 import { Send } from '@mui/icons-material';
+import emailjs from '@emailjs/browser';
 
 const ContactInfo = () => {
     const useStyles = makeStyles({
@@ -37,6 +38,43 @@ const ContactInfo = () => {
     })
     const classes = useStyles();
 
+    const [typedValue, setValue] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const handleClick = () => {
+        const template_params = {
+            email_id: typedValue.email,
+            from_name: typedValue.name,
+            message: typedValue.message,
+        };
+        const service_id = "service_hxol8rp";
+        const template_id = "template_ld264ew";
+        emailjs
+            .send(
+                service_id,
+                template_id,
+                template_params,
+                "user_F2cdrJa3K8XvhmWY0QLNh"
+            )
+            .then( (res) => {
+                console.log(res, 'res')
+                // setSnackBarOpen(true);
+                // setSnackBarError(false);
+                // setOpen(false);
+                // setIsLoading(false);
+            })
+            .catch((res) => {
+                console.log(res, 'err')
+                // setSnackBarOpen(true);
+                // setSnackBarError(false);
+                // setOpen(false);
+                // setIsLoading(false);
+            });
+    }
+
     return (
         <>
             <div className={`${classes.divpadding} contact-form`}>
@@ -53,7 +91,8 @@ const ContactInfo = () => {
                     }}
                     focused
                     placeholder="Please enter your name"
-
+                    onChange={(e) => setValue({ ...typedValue, name: e.target.value })}
+                    value={typedValue.name}
                 />
             </div>
             <div className={`${classes.divpadding}`}>
@@ -71,6 +110,8 @@ const ContactInfo = () => {
                     }}
                     focused
                     placeholder="Please enter your email id"
+                    onChange={(e) => setValue({ ...typedValue, email: e.target.value })}
+                    value={typedValue.email}
                 />
             </div>
             <div className={`${classes.divpadding}`}>
@@ -88,9 +129,11 @@ const ContactInfo = () => {
                     focused
                     placeholder="Write Something..."
                     rows={9}
+                    onChange={(e) => setValue({ ...typedValue, message: e.target.value })}
+                    value={typedValue.message}
                 />
             </div>
-            <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Send Message   <Send htmlColor='#FE6B8B' style={{marginLeft: '10px'}}/></Button>
+            <Button onClick={handleClick} variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Send Message   <Send htmlColor='#FE6B8B' style={{ marginLeft: '10px' }} /></Button>
         </>
     )
 }

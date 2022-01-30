@@ -10,11 +10,9 @@ import { ReactComponent as CSharp } from '../../assets/images/programming-lang/c
 import { ReactComponent as Html } from '../../assets/images/programming-lang/html.svg';
 import { ReactComponent as Css } from '../../assets/images/programming-lang/css.svg';
 
-const Skills = () => {
-
+const Skills = ({ myref }) => {
     return (
-
-        <Grid container className='card__layout' marginTop={'150px'} >
+        <Grid ref={myref} container className='card__layout' marginTop={'150px'} >
             <Heading heading="My Skills" isSecondary />
             <Box className='w-100'>
                 <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='20px'>

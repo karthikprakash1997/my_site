@@ -4,9 +4,9 @@ import ContactInfo from './contactInfo';
 import Map from './map';
 import Heading from "../../components/heading";
 
-const Contact = () => {
+const Contact = ({ myref }) => {
   return (
-    <Grid container marginTop={'150px'}>
+    <Grid ref={myref} container marginTop={'150px'}>
       <Heading heading={"Let's Talk"} />
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} >

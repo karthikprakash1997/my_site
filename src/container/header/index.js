@@ -5,7 +5,7 @@ import { Box, IconButton, MenuItem, Menu, Typography, Fade } from '@mui/material
 import { Menu as MenuIcon } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Header = ({ setSelectedComp }) => {
+const Header = ({ handleScroll }) => {
 
   const useStyles = makeStyles(theme => ({
     header: {
@@ -41,7 +41,7 @@ const Header = ({ setSelectedComp }) => {
     },
     background: {
       background: 'radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%)',
-      color:'white'
+      color: 'white'
     },
     burgerMenu: {
       height: 40,
@@ -66,14 +66,14 @@ const Header = ({ setSelectedComp }) => {
       <Box className={`header-hldr`} display='flex' alignItems='center' marginLeft='auto'>
         <ul id="menu-main-menu" className={`${classes.menu}`}>
           {HEADER.map((it, index) => (
-            <li id={`menu-item-5${index}`} className={`${classes.menuItem}`} onClick={() => setSelectedComp(it.value)}>
+            <li key={it.value} id={`menu-item-5${index}`} className={`${classes.menuItem}`} onClick={() => handleScroll(it.value)}>
               <Typography fontWeight={600} color='whitesmoke'>{it.title}</Typography>
             </li>
           ))}
         </ul>
       </Box >
       <IconButton className={`${classes.burgerMenu} burger-menu`} edge='end' onClick={handleOpen}>
-        {Boolean(anchorEl) ? <CloseIcon sx={{ color: 'white' }}/> : <MenuIcon sx={{ color: 'white' }} />}
+        {Boolean(anchorEl) ? <CloseIcon sx={{ color: 'white' }} /> : <MenuIcon sx={{ color: 'white' }} />}
       </IconButton>
       <Menu
         id="basic-menu"
@@ -86,8 +86,13 @@ const Header = ({ setSelectedComp }) => {
         }}
         TransitionComponent={Fade}
       >
-        {['Home', 'About', 'Education & Experience', 'Skills', 'Projects', 'Contact'].map((it) =>
-          <MenuItem onClick={handleClose}>{it}</MenuItem>)}
+        {HEADER.map((it) =>
+          <MenuItem
+            key={it.value}
+            onClick={() => {
+              handleScroll(it.value);
+              handleClose();
+            }}>{it.title}</MenuItem>)}
       </Menu>
     </header >
   );

@@ -4,7 +4,7 @@ import { Grid, Typography, List, ListItem } from '@mui/material';
 import { Box } from "@mui/system";
 import Heading from '../../components/heading';
 
-const About = () => {
+const About = ({ myref }) => {
   const useStyles = makeStyles({
     sectionAbout: {
       height: '100vh',
@@ -49,7 +49,7 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Grid container className='card__layout' marginTop={'150px'} >
+    <Grid ref={myref} container className='card__layout' marginTop={'150px'} >
       <Grid item className='w-100'>
         <Heading heading="My Story" isSecondary />
       </Grid>
@@ -73,7 +73,7 @@ const About = () => {
             </Typography>
             <List className={`${classes["pt-0"]}`}>
               {['IoT', 'Software Development - (Mobile and Web Application development)'].map(it =>
-              (<ListItem disablePadding>
+              (<ListItem key={it} disablePadding>
                 <Typography lineHeight='26px' mt='8px'>
                   * {it}
                 </Typography>
