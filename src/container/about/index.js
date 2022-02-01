@@ -57,7 +57,7 @@ const About = ({ myref }) => {
       <Grid container spacing={2} justifyContent='center' width='unset'>
         <Grid item xs={12} md={4} >
           <img
-            src={window.location.origin + "/assets/images/myself/2.png"}
+            src={window.location.origin + "/assets/images/myself/2.jpg"}
             style={{ height: "450px", width: '400px' }}
             alt="achivemens"
             className={`${classes.profile}`}
