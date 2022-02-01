@@ -25,12 +25,12 @@ const Education = ({ myref }) => {
                         icon={it.icon}
                     >
                         <Box display='flex' alignItems='center' columnGap='12px'>
-                            <img src={require('../../assets/images/axim.jpeg')} alt='company_logo' heigth='40' width='40' />
-                            <Typography variant='h4' >{it.title}</Typography>
+                            {/* <img src={require('../../assets/images/axim.jpeg')} alt='company_logo' heigth='40' width='40' /> */}
+                            <Typography variant='h6' >{it.title}</Typography>
                         </Box>
-                        {it.location ?
+                        {/* {it.location ?
                             <Typography variant='h4' >{it.location} </Typography>
-                            : null}
+                            : null} */}
                         {
                             it.description.length > 0 ? <p>
                                 {it.description}

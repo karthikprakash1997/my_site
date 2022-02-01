@@ -18,19 +18,23 @@ export const VIW_POINT = {
     zoom: 12,
 };
 
+export const TOOLS = ['react', 'node', 'express', 'mongo', 'mysql', 'matlab', 'arduino', 'rasp', 'unity', 'github', 'git', 'jira']
+
+export const PROGRAMMING_LANG = ['js', 'ts', 'python', 'c++', 'c', 'html', 'css-3', 'postgre']
+
 export const INITIAL_SNACKBAR = {
     isOpen: false,
     severity: 'success',
     message: '',
-    autoHideDuration:null
+    autoHideDuration: null
 }
 
 export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
-    date: '2011 - present',
+    date: 'Dec, 2019 - Present',
     icon: <WorkIcon />,
     iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
-    title: 'Aximsoft,',
+    title: 'Software Developer-Applications @Aximsoft',
     location: 'Coimbatore',
     description: '',
     contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
@@ -41,7 +45,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     date: '',
     icon: <SchoolIcon />,
     iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
-    title: 'ML Certification',
+    title: 'ML Certification from Coursera.com',
     location: '',
     description: '',
     contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
@@ -49,10 +53,10 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
 },
 {
     variant: "vertical-timeline-element--work",
-    date: '',
+    date: 'Dec, 2018 - Apr, 2019',
     icon: <WorkIcon />,
     iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
-    title: 'Intern',
+    title: 'Internship @DevlingR&D',
     location: '',
     description: '',
     contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
@@ -60,10 +64,10 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
 },
 {
     variant: "vertical-timeline-element--work",
-    date: '',
+    date: 'May, 2017 - Jul, 2017',
     icon: <WorkIcon />,
     iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
-    title: 'Intern',
+    title: 'Internship @TANGEDCO',
     location: '',
     description: '',
     contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
@@ -71,23 +75,12 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
 },
 {
     variant: "vertical-timeline-element--work",
-    date: '',
+    date: 'Jun, 2014 - May, 2019',
     icon: <SchoolIcon />,
     iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
-    title: 'B.E EEE',
+    title: 'B.E EEE(SW) @PSG College of Technology',
     location: '',
     description: '',
     contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
-},
-{
-    variant: "vertical-timeline-element--work",
-    date: '',
-    icon: <SchoolIcon />,
-    iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
-    title: '12th',
-    location: '',
-    description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
-    contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
-}]
+}];

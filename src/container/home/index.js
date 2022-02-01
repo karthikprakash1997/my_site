@@ -5,6 +5,7 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 // import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
+import MyPDF from '../../assets/resume/resume.pdf'
 
 const Home = ({ myref }) => {
 
@@ -68,10 +69,9 @@ const Home = ({ myref }) => {
     // }, [classes.linearText, classes.gradName]);
 
     return (
-        // <WrapperSection classVariant='section-home'>
+        // <WrapperSection >
         <Grid ref={myref} container className={`${classes.sectionHome}`} spacing={2} marginX='auto' paddingTop={'130px'}>
             <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center'>
-
                 <Box display='flex' flexDirection='column' color='#ffffff'>
                     <Box>
                         <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
@@ -89,28 +89,33 @@ const Home = ({ myref }) => {
                         />
                     </Box>
                     <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
-                        <Button variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
+                        <Button href={MyPDF} download="karthik_prakash.pdf" variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
                         <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
-                            <GitHub fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                            <LinkedIn fontSize='large' sx={{ color: 'white', height: '42px' }} />
-                            <Email fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <GitHub cursor="pointer" onClick={() => window.open("https://www.github.com/karthikprakash1997")} fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <LinkedIn cursor="pointer" onClick={() => window.open("https://www.linkedin.com/in/karthik-prakash-s")} fontSize='large' sx={{ color: 'white', height: '42px' }} />
+                            <Email cursor="pointer" onClick={() => window.open('mailto:karthiksiva1997@gmail.com')} fontSize='large' sx={{ color: 'white', height: '42px' }} />
                         </Box>
                     </Box>
                     <Box textAlign='center' fontSize='large' color='#ffffff' display='flex' columnGap='20px' marginTop='20px'>
-                        "Let and Live!"
+                        "Curiosity is the most powerful thing you own."
+                    </Box>
+                    <Box textAlign='center' fontSize='large' color='#ffffff' columnGap='20px' marginTop='20px'>
+                        - James Cameron
                     </Box>
                 </Box>
             </Grid>
             <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' >
-                <div className='animated-container'>
-                    {[...Array(200)].map((it, index) => <div className="circle-container" key={index}>
-                        <div className="circle"></div></div>)}
-                </div>
-                <img src={require('../../assets/ai_head.png')} alt='Ai Head'  width="100%" height="100%"  />
+                {/* <WrapperSection > */}
+                    <div className='animated-container'>
+                        {[...Array(200)].map((it, index) => <div className="circle-container" key={index}>
+                            <div className="circle"></div></div>)}
+                    </div>
+                {/* </WrapperSection > */}
+                <img src={require('../../assets/ai_head.png')} alt='Ai Head' width="100%" height="100%" />
                 {/* <AiHeadAnimation /> */}
             </Grid >
         </Grid >
-        // </WrapperSection >
+        // {/* </WrapperSection > */}
     )
 }
 

@@ -2,32 +2,30 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import Heading from '../../components/heading';
 import { Box } from '@mui/system';
-import { ReactComponent as CLang } from '../../assets/images/programming-lang/c-lang.svg';
-import { ReactComponent as JS } from '../../assets/images/programming-lang/js.svg';
-import { ReactComponent as TS } from '../../assets/images/programming-lang/ts.svg';
-import { ReactComponent as Python } from '../../assets/images/programming-lang/python.svg';
-import { ReactComponent as CSharp } from '../../assets/images/programming-lang/c#.svg';
-import { ReactComponent as Html } from '../../assets/images/programming-lang/html.svg';
-import { ReactComponent as Css } from '../../assets/images/programming-lang/css.svg';
+import { PROGRAMMING_LANG, TOOLS } from '../../util';
 
 const Skills = ({ myref }) => {
     return (
         <Grid ref={myref} container className='card__layout' marginTop={'150px'} >
             <Heading heading="Tech Stack" isSecondary />
             <Box className='w-100'>
-                <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='20px'>
-                    <JS />
-                    <TS />
-                    <Python />
-                    <CLang />
-                    <CSharp />
-                    <CLang />
-                    <Html />
-                    <Css />
-                    {/* <CLang />
-                    <CLang />
-                    <CLang />
-                    <CLang /> */}
+                <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='30px'>
+                    {PROGRAMMING_LANG.map(it => {
+                        const icon = `../../assets/images/programming-lang/${it}.png`
+                        return (
+                            <img src={icon} alt={it} width={'60px'} height={'60px'} />
+                        )
+                    })}
+                </Box>
+            </Box>
+            <Box className='w-100' marginTop={'5%'}>
+                <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='30px'>
+                    {TOOLS.map(it => {
+                        const icon = `../../assets/images/tools/${it}.png`
+                        return (
+                            <img src={icon} alt={it} width={it === 'express' ? '150px' : '60px'} height={'60px'} />
+                        )
+                    })}
                 </Box>
             </Box>
         </Grid>

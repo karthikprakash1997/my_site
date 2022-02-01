@@ -91,8 +91,7 @@ const ContactInfo = () => {
     };
 
     const handleClick = () => {
-
-        const isInValid = !validateEmail(typedValue.email) || !typedValue.name
+        const isInValid = !validateEmail(typedValue.email) || !typedValue.name;
         if (isInValid) {
             setSnackbar({
                 isOpen: true,
@@ -102,7 +101,6 @@ const ContactInfo = () => {
         } else {
             handleMail()
         }
-
     }
 
     return (
@@ -167,7 +165,6 @@ const ContactInfo = () => {
                 Send Message
                 <Send htmlColor='#FE6B8B' style={{ marginLeft: '10px' }} />
             </Button>
-
             <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={snackbar.isOpen} autoHideDuration={snackbar.autoHideDuration} onClose={() => setSnackbar(INITIAL_SNACKBAR)}>
                 <Alert onClose={() => setSnackbar(INITIAL_SNACKBAR)} severity={snackbar.severity} sx={{ width: '100%' }}>
                     {snackbar.message}

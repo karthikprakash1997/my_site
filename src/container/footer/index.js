@@ -1,9 +1,7 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
-import { LinkedIn, Email } from '@mui/icons-material';
+import { LinkedIn, Email, GitHub } from '@mui/icons-material';
 import { Box } from "@mui/system";
-import GitHubIcon from '@mui/icons-material/GitHub';
-
 
 const Footer = () => {
 	const useStyles = makeStyles(() => ({
@@ -20,7 +18,7 @@ const Footer = () => {
 			background: 'linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%)',
 			height: 90,
 			padding: '0 50px',
-			marginTop:'150px'
+			marginTop: '150px'
 		},
 	}));
 
@@ -28,9 +26,9 @@ const Footer = () => {
 	return (
 		<footer id="colophon" className={`${classes.footer}`}>
 			<Box className='skill-list' display='flex' alignItems='center' justifyContent='center'>
-				<GitHubIcon fontSize='large' sx={{ color: 'white' }} />
-				<LinkedIn fontSize='large' sx={{ color: 'white' }} />
-				<Email fontSize='large' sx={{ color: 'white' }} />
+				<GitHub cursor="pointer" onClick={() => window.open("https://www.github.com/karthikprakash1997")} fontSize='large' sx={{ color: 'white' }} />
+				<LinkedIn cursor="pointer" onClick={() => window.open("https://www.linkedin.com/in/karthik-prakash-s")} fontSize='large' sx={{ color: 'white' }} />
+				<Email cursor="pointer" onClick={() => window.open('mailto:karthiksiva1997@gmail.com')} fontSize='large' sx={{ color: 'white' }} />
 			</Box>
 			{/* <Box textAlign='center' fontSize='large' color='#ffffff'  display='flex' alignItems='center' justifyContent='center'>
 				Karthik Prakash
