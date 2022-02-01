@@ -41,7 +41,7 @@ const Projects = ({ myref }) => {
             {[...new Array(5)].map((_1, index) => (
                 <Box paddingBottom={'20px'} key={index}>
                     <Box className={`project-hldr ${classes.projects} ${index % 2 ? classes.pinkBackGround : classes.whiteBackGround}`} paddingX={'30px'} paddingY={'30px'}>
-                        <img className={`${classes.proImg}`} src={require('../../assets/images/study.svg')} alt="projects" />
+                        <img className={`${classes.proImg}`} src={window.location.origin + '/assets/images/study.svg'} alt="projects" />
                         <div>
                             <Box whiteSpace='nowrap'>
                                 <Box display={'inline'}>Date:</Box>

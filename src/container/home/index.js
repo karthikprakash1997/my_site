@@ -5,7 +5,8 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 // import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
-import MyPDF from '../../assets/resume/resume.pdf'
+import MyPDF from '../../assets/resume/resume.pdf';
+// import aihead from '../../../public/assets/images'
 
 const Home = ({ myref }) => {
 
@@ -106,12 +107,23 @@ const Home = ({ myref }) => {
             </Grid>
             <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' >
                 {/* <WrapperSection > */}
-                    <div className='animated-container'>
-                        {[...Array(200)].map((it, index) => <div className="circle-container" key={index}>
-                            <div className="circle"></div></div>)}
-                    </div>
+                <div className='animated-container'>
+                    {[...Array(200)].map((it, index) => <div className="circle-container" key={index}>
+                        <div className="circle"></div></div>)}
+                </div>
                 {/* </WrapperSection > */}
-                <img src={require('../../assets/ai_head.png')} alt='Ai Head' width="100%" height="100%" />
+                {/* <Box
+                    component="img"
+                    sx={{
+                        width:"100%",
+                        height:"100%"
+                        //   maxHeight: { xs: 233, md: 167 },
+                        //   maxWidth: { xs: 350, md: 250 },
+                    }}
+                    alt="Ai Head"
+                    src="'../../../public/assets/images/ai_head.png'"
+                /> */}
+                <img src={window.location.origin + '/assets/images/ai_head.png'} alt='Ai Head' width="100%" height="100%" />
                 {/* <AiHeadAnimation /> */}
             </Grid >
         </Grid >

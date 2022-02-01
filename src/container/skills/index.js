@@ -11,9 +11,9 @@ const Skills = ({ myref }) => {
             <Box className='w-100'>
                 <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='30px'>
                     {PROGRAMMING_LANG.map(it => {
-                        const icon = `../../assets/images/programming-lang/${it}.png`
+                        const icon = `/assets/images/programming-lang/${it}.png`
                         return (
-                            <img src={icon} alt={it} width={'60px'} height={'60px'} />
+                            <img src={window.location.origin + icon} alt={it} width={'60px'} height={'60px'} />
                         )
                     })}
                 </Box>
@@ -21,9 +21,9 @@ const Skills = ({ myref }) => {
             <Box className='w-100' marginTop={'5%'}>
                 <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap' gap='30px'>
                     {TOOLS.map(it => {
-                        const icon = `../../assets/images/tools/${it}.png`
+                        const icon = `/assets/images/tools/${it}.png`
                         return (
-                            <img src={icon} alt={it} width={it === 'express' ? '150px' : '60px'} height={'60px'} />
+                            <img src={window.location.origin + icon} alt={it} width={it === 'express' ? '150px' : '60px'} height={'60px'} />
                         )
                     })}
                 </Box>
