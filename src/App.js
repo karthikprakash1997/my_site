@@ -6,7 +6,6 @@ import Home from './container/home';
 import Education from "./container/education";
 import Skills from "./container/skills";
 import Contact from "./container/contact";
-import Projects from "./container/projects";
 import Footer from "./container/footer";
 import About from './container/about';
 
@@ -18,7 +17,6 @@ const App = () => {
   const aboutref = useRef();
   const eduref = useRef();
   const skillref = useRef();
-  const projectsref = useRef();
   const contatcsref = useRef();
 
   const handleScroll = (value) => {
@@ -31,9 +29,6 @@ const App = () => {
         break;
       case 'skills':
         skillref.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        break;
-      case 'projects':
-        projectsref.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
         break;
       case 'contact':
         contatcsref.current.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
@@ -51,7 +46,6 @@ const App = () => {
         <About myref={aboutref} />
         <Education myref={eduref} />
         <Skills myref={skillref} />
-        <Projects myref={projectsref} />
         <Contact myref={contatcsref} />
       </Grid>
       <Footer />

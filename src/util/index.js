@@ -7,7 +7,7 @@ export const HEADER = [
     { title: 'About', value: 'about' },
     { title: 'Education & Experience', value: 'education' },
     { title: 'Skills', value: 'skills' },
-    { title: 'Projects', value: 'projects' },
+    // { title: 'Projects', value: 'projects' },
     // { title: 'Interests', value: 'interests' },
     { title: 'Contact', value: 'contact' },
 ]
@@ -84,3 +84,12 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 }];
+
+export const EXPERIENCE_DETAILS = {
+    aximsoft: {
+        duration: 'Dec, 2019 - Present',
+        image: 'axim.jpeg',
+        title: 'Software Developer - Applications',
+        description: 'Duis occaecat irure labore veniam id fugiat consequat tempor amet consectetur cillum voluptate. Sint aliquip non officia veniam excepteur. Do amet et tempor sit enim.Reprehenderit reprehenderit minim velit nulla. Nostrud consequat in mollit quis cupidatat nisi. Velit fugiat nulla anim aliquip dolor laboris non amet ad esse irure consectetur. Ut nisi duis do laboris deserunt exercitation elit est laborum elit dolore adipisicing fugiat. Esse officia deserunt pariatur nulla in duis amet dolore culpa cillum esse magna.'
+    }
+}
