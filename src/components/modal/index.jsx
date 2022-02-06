@@ -1,17 +1,18 @@
 import React from "react";
-import { Box, Typography, Modal } from '@mui/material';
+import { Box, Typography, Modal, Chip } from '@mui/material';
 import { makeStyles } from "@mui/styles";
 
-const DetailModal = ({ open, handleClose, isPink = false, data }) => {
+const DetailModal = ({ open, handleClose, data }) => {
 
     const useStyles = makeStyles({
         projects: {
             display: 'flex',
             alignItems: 'center',
-            gap: 66,
+            gap: 30,
             margin: '0 auto',
             borderRadius: '1.5rem',
-            // height:'75%'
+            maxHeight: '75%',
+            overflowY: 'auto'
         },
         proImg: {
             width: 121,
@@ -24,11 +25,18 @@ const DetailModal = ({ open, handleClose, isPink = false, data }) => {
             WebkitTextFillColor: "transparent",
         },
         pinkBackGround: {
-            // background: 'linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%)',
-            background: '#FE6B8B'
+            background: '#FE6B8B',
+            color: 'white'
         },
         whiteBackGround: {
             background: 'rgb(238, 238, 238)',
+        },
+        modal: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '80%',
+            margin: 'auto',
         }
     })
 
@@ -40,35 +48,75 @@ const DetailModal = ({ open, handleClose, isPink = false, data }) => {
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-            style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '80%',
-                // height: '100%',
-                margin: 'auto',
-                // overflow: 'scroll'
-            }}
             disableAutoFocus
+            className={`${classes.modal}`}
+            key={data.title}
         >
-            <Box className={`project-hldr ${classes.projects} ${isPink ? classes.pinkBackGround : classes.whiteBackGround}`} paddingX={'30px'} paddingY={'30px'}>
-                <img className={`${classes.proImg}`} src={window.location.origin + '/assets/images/exp/axim.jpeg'} alt="projects" />
+            <Box className={`project-hldr ${classes.projects} ${data?.isPink ? classes.pinkBackGround : classes.whiteBackGround}`} paddingX={'30px'} paddingY={'30px'}>
+                <img className={`${classes.proImg}`} src={window.location.origin + `/assets/images/exp/${data?.image}`} alt="projects" />
                 <div>
                     <Box whiteSpace='nowrap'>
                         <Box display={'inline'}>Duration:</Box>
-                        <Box>{data.duration}</Box>
+                        <Box>{data?.duration}</Box>
                     </Box>
-                    {data.subtitle && <Box whiteSpace='nowrap' mt='12px'>
-                        <Box display={'inline'}>{data.subtitle}:</Box>
-                        <Box>{data.subtitleDescription}</Box>
+                    <Box whiteSpace='nowrap' mt='12px'>
+                        {data?.subtitle && <Box display={'inline'}>{data?.subtitle}:</Box>}
+                        {data?.subtitleDescription && <Box>{data?.subtitleDescription}</Box>}
+                    </Box>
+                    <Box whiteSpace='nowrap' mt='12px'>
+                        {data?.secondarySubtitle && <Box display={'inline'}>{data?.secondarySubtitle}:</Box>}
+                        {data?.secondarySubtitleText && <Box>{data?.secondarySubtitleText}</Box>}
+                    </Box>
+                </div>
+                <Box >
+                    <Typography variant="h4">{data?.title}</Typography>
+                    <Box marginLeft={data?.isPara ? '0px' : '25px'}>
+                        {!data?.isPara ?
+                            <ul>
+                                {data?.description?.map((it, ind) => (
+                                    <li key={ind}>
+                                        <Typography textAlign={'justify'}>
+                                            {it}
+                                        </Typography>
+
+                                    </li>))}
+                            </ul>
+                            :
+                            <>
+                                {data?.description?.map((it, ind) => (
+                                    <Typography key={ind} textAlign={'justify'} style={{ textIndent: '10%' }} paragraph>
+                                        {it}
+                                    </Typography>))}
+                            </>
+                        }
+                    </Box>
+                    {data?.projects?.length > 0 && <Box>{
+                        data?.projects.map((it, ind) => (
+                            <>
+                                <Typography key={ind} variant="h6">{it.title}</Typography>
+                                <Box marginLeft={'25px'}>
+                                    <ul>
+                                        {it.description.map((datum, ind) => (
+                                            <li key={ind}>
+                                                <Typography textAlign={'justify'}>
+                                                    {datum}
+                                                </Typography>
+
+                                            </li>))}
+                                    </ul>
+                                </Box>
+                            </>
+                        ))}
                     </Box>}
-                </div>
-                <div>
-                    <Typography variant="h4">{data.title}</Typography>
-                    <Typography textAlign={'justify'}>
-                        {data.description}
-                    </Typography>
-                </div>
+                    {data?.chipText?.length && <Box whiteSpace='nowrap' mt='12px'>
+                        <Box display={'inline'}>{data?.chipTitle}: </Box>
+                        <Box display='flex' style={{ flexWrap: 'wrap' }} gap='10px' marginTop='5px'>
+                            {data?.chipText.map((it,ind) => (
+                                <Chip key={ind} label={it} className={`${!data?.isPink ? classes.pinkBackGround : classes.whiteBackGround}`} />
+                            ))}
+                        </Box>
+                    </Box>}
+                </Box>
             </Box>
         </Modal>
     )

@@ -35,9 +35,9 @@ const Education = ({ myref }) => {
                                         cursor: 'pointer',
                                         fontStyle: 'italic',
                                         fontSize: 22,
-                                        textDecorationLine:'underline'
+                                        textDecorationLine: 'underline'
                                     }}
-                                    onClick={() => handleModal(true)}>
+                                    onClick={() => handleModal(it.value)}>
                                     {it.title}
                                 </Box>
                             </Box>
@@ -46,12 +46,14 @@ const Education = ({ myref }) => {
                     ))}
                 </VerticalTimeline>
             </Grid>
-            <DetailModal
-                open={modal}
-                handleClose={() => handleModal()}
-                data={EXPERIENCE_DETAILS.aximsoft}
-            // isPink={}
-            />
+            {modal && EXPERIENCE_DETAILS[modal] &&
+                <DetailModal
+                    open={modal && EXPERIENCE_DETAILS[modal] ? true : false}
+                    handleClose={() => handleModal()}
+                    data={EXPERIENCE_DETAILS[modal]}
+                />
+            }
+
         </>
     )
 }

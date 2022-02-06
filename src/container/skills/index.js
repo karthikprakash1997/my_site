@@ -13,7 +13,7 @@ const Skills = ({ myref }) => {
                     {PROGRAMMING_LANG.map(it => {
                         const icon = `/assets/images/programming-lang/${it}.png`
                         return (
-                            <img src={window.location.origin + icon} alt={it} width={'60px'} height={'60px'} />
+                            <img key={it} src={window.location.origin + icon} alt={it} width={'60px'} height={'60px'} />
                         )
                     })}
                 </Box>
@@ -23,7 +23,7 @@ const Skills = ({ myref }) => {
                     {TOOLS.map(it => {
                         const icon = `/assets/images/tools/${it}.png`
                         return (
-                            <img src={window.location.origin + icon} alt={it} width={it === 'express' ? '150px' : '60px'} height={'60px'} />
+                            <img key={it} src={window.location.origin + icon} alt={it} width={it === 'express' ? '150px' : '60px'} height={'60px'} />
                         )
                     })}
                 </Box>

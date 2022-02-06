@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Grid } from '@mui/material';
+import scrollToComponent from 'react-scroll-to-component';
 
 import Header from './container/header';
 import Home from './container/home';
@@ -22,25 +23,25 @@ const App = () => {
   const handleScroll = (value) => {
     switch (value) {
       case 'about':
-        aboutref.current.scrollIntoView({ block: "center", inline: "nearest" });
+        scrollToComponent(aboutref.current, {duration:200, align: 'middle', offset:-90})
         break;
       case 'education':
-        eduref.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+        scrollToComponent(eduref.current, {duration:200, align: 'top', offset:-90})
         break;
       case 'skills':
-        skillref.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        scrollToComponent(skillref.current, {duration:200, align: 'middle', offset:-90})
         break;
       case 'contact':
-        contatcsref.current.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        scrollToComponent(contatcsref.current, {duration:200, align: 'middle'})
         break;
       default:
-        homeref.current.scrollIntoView({ block: "center", inline: "nearest" });
+        scrollToComponent(homeref.current, {duration:200, align: 'top', offset:-90})
         break;
     }
   }
   return (
     <>
-      <Grid container maxWidth={'1600px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} >
+      <Grid className='custom-scrollbar' container maxWidth={'1600px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} >
         <Header handleScroll={handleScroll} />
         <Home myref={homeref} />
         <About myref={aboutref} />
