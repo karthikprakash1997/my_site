@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 // import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
-import MyPDF from '../../assets/resume/resume.pdf';
+import MyPDF from '../../assets/resume/karthik_prakash.pdf';
 // import aihead from '../../../public/assets/images'
 
 const Home = ({ myref }) => {
@@ -124,10 +124,8 @@ const Home = ({ myref }) => {
                     src="'../../../public/assets/images/ai_head.png'"
                 /> */}
                 <img src={window.location.origin + '/assets/images/ai_head.png'} alt='Ai Head' width="100%" height="100%" />
-                {/* <AiHeadAnimation /> */}
             </Grid >
         </Grid >
-        // {/* </WrapperSection > */}
     )
 }
 
