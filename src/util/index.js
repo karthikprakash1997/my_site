@@ -18,9 +18,9 @@ export const VIW_POINT = {
     zoom: 12,
 };
 
-export const TOOLS = ['react', 'node', 'express', 'mongo', 'mysql', 'matlab', 'arduino', 'rasp', 'unity', 'github', 'git', 'jira']
+export const TOOLS = ['react', 'node', 'express', 'mongo', 'mysql', 'matlab', 'arduino', 'github', 'git', 'jira']
 
-export const PROGRAMMING_LANG = ['js', 'ts', 'python', 'c++', 'c', 'html', 'css-3', 'postgre']
+export const PROGRAMMING_LANG = ['js', 'ts', 'python', 'html', 'css-3', 'postgre']
 
 export const INITIAL_SNACKBAR = {
     isOpen: false,
@@ -31,7 +31,18 @@ export const INITIAL_SNACKBAR = {
 
 export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     variant: "vertical-timeline-element--work",
-    date: 'Dec, 2019 - Present',
+    date: 'Jan 2023 - Present',
+    icon: <SchoolIcon />,
+    value: 'University of Waterloo',
+    iconStyle: { background: '#eeeeee', color: '#FE6B8B' },
+    title: 'MEng Eelctrical and Computer Engineering',
+    location: '',
+    description: '',
+    contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
+    contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
+},{
+    variant: "vertical-timeline-element--work",
+    date: 'Dec, 2019 - Jan, 2023',
     icon: <WorkIcon />,
     iconStyle: { background: '#FE6B8B', color: '#eeeeee' },
     title: 'Software Developer-Applications @Aximsoft',
@@ -50,7 +61,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     title: 'ML Certification from Coursera.com',
     location: '',
     description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+    contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 },
 {
@@ -74,7 +85,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [{
     title: 'Internship @TANGEDCO',
     location: '',
     description: '',
-    contentStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+    contentStyle: { background: 'rgb(33, 150, 243)', color: 'rgba(0, 0, 0, 0.87)' },
     contentArrowStyle: { borderRight: '7px solid  rgb(33, 150, 243)' }
 },
 {

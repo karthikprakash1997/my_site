@@ -41,7 +41,7 @@ const App = () => {
   }
   return (
     <>
-      <Grid className='custom-scrollbar' container maxWidth={'1600px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} >
+      <Grid className='custom-scrollbar' container maxWidth={'1400px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} >
         <Header handleScroll={handleScroll} />
         <Home myref={homeref} />
         <About myref={aboutref} />

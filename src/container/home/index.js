@@ -76,7 +76,7 @@ const Home = ({ myref }) => {
                 <Box display='flex' flexDirection='column' color='#ffffff'>
                     <Box>
                         <Typography fontSize='20px' className={`${classes.linearText} ${classes.greeting}`}>Hello, I am </Typography>
-                        <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash</Typography>
+                        <Typography className={`${classes.profileName} ${classes.linearText}`}>Karthik Prakash Sivakumar</Typography>
                         <Typed
                             strings={[
                                 "Software Developer",

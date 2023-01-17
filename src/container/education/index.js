@@ -10,9 +10,8 @@ import DetailModal from "../../components/modal";
 const Education = ({ myref }) => {
 
     const [modal, setModal] = useState(false);
-    const handleModal = (value = false) => {
-        setModal(value)
-    }
+    const handleModal = (value = false) => setModal(value)
+
     return (
         <>
             <Grid ref={myref} container marginTop={'150px'}>
