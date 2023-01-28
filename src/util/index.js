@@ -18,7 +18,9 @@ export const VIW_POINT = {
     zoom: 12,
 };
 
-export const TOOLS = ['react', 'node', 'express', 'mongo', 'mysql', 'matlab', 'arduino', 'github', 'git', 'jira']
+export const FULL_STACK_TOOLS = ['react', 'node', 'express', 'mongo', 'mysql', 'github', 'git', 'jira'];
+
+export const TOOLS = ['matlab', 'arduino'];
 
 export const PROGRAMMING_LANG = ['js', 'ts', 'python', 'html', 'css-3', 'postgre']
 

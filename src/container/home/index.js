@@ -12,7 +12,7 @@ const Home = ({ myref }) => {
     const useStyles = makeStyles({
         sectionHome: {
             width: '100%',
-            height: '90vh',
+            height: '100vh',
             display: 'flex',
             alignItems: 'center',
         },

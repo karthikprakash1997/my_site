@@ -23,16 +23,16 @@ const App = () => {
   const handleScroll = (value) => {
     switch (value) {
       case 'about':
-        scrollToComponent(aboutref.current, {duration:200, align: 'middle', offset:-90})
+        scrollToComponent(aboutref.current, {duration:200, align: 'middle', offset:-45})
         break;
       case 'education':
         scrollToComponent(eduref.current, {duration:200, align: 'top', offset:-90})
         break;
       case 'skills':
-        scrollToComponent(skillref.current, {duration:200, align: 'middle', offset:-90})
+        scrollToComponent(skillref.current, {duration:200, align: 'middle', offset:-45})
         break;
       case 'contact':
-        scrollToComponent(contatcsref.current, {duration:200, align: 'middle'})
+        scrollToComponent(contatcsref.current, {duration:200, align: 'middle', offset:-60})
         break;
       default:
         scrollToComponent(homeref.current, {duration:200, align: 'top', offset:-90})

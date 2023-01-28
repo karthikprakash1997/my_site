@@ -20,7 +20,7 @@ const About = ({ myref }) => {
       paddingTop: 0
     },
     textIndent: {
-      textIndent: 36
+      textIndent: 75
     }
   })
 
@@ -38,7 +38,7 @@ const About = ({ myref }) => {
             className={`${classes.profile}`} width="80%" height="100%" />
             </Grid >
         <Grid item xs={12} md={6} >
-          <Box display='flex' flexDirection='column' color='#ffffff'>
+          <Box display='flex' flexDirection='column' color='#ffffff' className={`${classes.textIndent}`}>
             <Typography lineHeight='26px' textAlign='justify'>
               {`I am a software developer with a passion for creating innovative and cutting-edge web applications. 
               I have 3.5+ years of experience in software development, and my expertise in React JS, Node JS, PostgreSQL, Python, and other web related technologies allows me to design and build web applications that are both functional and visually appealing. 
