@@ -81,7 +81,7 @@ const Home = ({ myref }) => {
                             strings={[
                                 "Software Developer",
                                 "Tech Enthusiast",
-                                "Writer"
+                                "Bibliophile"
                             ]}
                             typeSpeed={30}
                             className={`${classes.linearText} ${classes.gradName}`}

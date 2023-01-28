@@ -66,10 +66,12 @@ const About = ({ myref }) => {
         <Grid item xs={12} md={6} >
           <Box display='flex' flexDirection='column' color='#ffffff'>
             <Typography lineHeight='26px' textAlign='justify'>
-              I am an energetic individual addicted to the joy of developing products with computers and software. In my long journey of developing career, I worked on various IoT and Web/Mobile Applications. Being a developer, I have never been shy of learning cutting-edge technologies that solve complex and pervasive problems. I have always motivated myself to take ownership of the end-to-end development and focus on quality and the impact of the product.
+              {`I am a software developer with a passion for creating innovative and cutting-edge web applications. 
+              I have 3.5+ years of experience in software development, and my expertise in React JS, Node JS, PostgreSQL, Python, and other web related technologies allows me to design and build web applications that are both functional and visually appealing. 
+              `}
             </Typography>
             <Typography lineHeight='26px' textAlign='justify' mt='16px'>
-              I have 3.5+ years of experience on software development.
+              {`Additionally, my knowledge of Machine Learning and the Internet of Things gives me the ability to create applications that can learn from and adapt to user behavior and interact with physical devices.`}
             </Typography>
             {/* <List className={`${classes["pt-0"]}`}>
               {['Software Development', 'IoT'].map(it =>
@@ -81,10 +83,14 @@ const About = ({ myref }) => {
             </List> */}
             <Typography lineHeight='26px' textAlign='justify' mt='16px'>
               I am a Graduate student doing MEng at Electrical and Computer Engineering in University of Waterloo with focus on software, AI/ML specialization.
-              {/* I am currently learning Machine Learning.  I am a prospective MEng student, eager to Machine Learning, software testing, and management. */}
             </Typography>
+
             <Typography lineHeight='26px' mt='16px'>
               I work in a niche and am eager to solve complex problems that can help society in any means. If you have one, do hit me.
+            </Typography>
+
+            <Typography lineHeight='26px' textAlign='justify' mt='16px'>
+              I love reading books, if you do too or have/need any suggestion do hit me.
             </Typography>
           </Box>
         </Grid>
