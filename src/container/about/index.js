@@ -6,12 +6,6 @@ import Heading from '../../components/heading';
 
 const About = ({ myref }) => {
   const useStyles = makeStyles({
-    sectionAbout: {
-      height: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      backgroundColor: '#F8F9F9',
-    },
     profile: {
       borderRadius: 10,
       '@media(max-width: 1440px)': {
@@ -21,22 +15,6 @@ const About = ({ myref }) => {
         objectFit: 'contain',
         width: '100% !important'
       }
-    },
-    profileName: {
-      fontSize: 48,
-      color: 'transparent',
-      WebkitTextStroke: '1px #ffffff',
-      textTransform: 'uppercase',
-      fontWeight: 700
-    },
-    role: {
-      fontSize: 36,
-      fontWeight: 700
-    },
-    linearText: {
-      background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
     },
     'pt-0': {
       paddingTop: 0
@@ -55,14 +33,10 @@ const About = ({ myref }) => {
       </Grid>
 
       <Grid container spacing={2} justifyContent='center' width='unset'>
-        <Grid item xs={12} md={4} marginRight={20}>
-          <img
-            src={window.location.origin + "/assets/images/myself/1.jpg"}
-            style={{ height: "400px", width: '500px' }}
-            alt="achivemens"
-            className={`${classes.profile}`}
-          />
-        </Grid>
+         <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' >
+                <img src={window.location.origin + "/assets/images/myself/1.jpg"}  alt="karthik_prakash"
+            className={`${classes.profile}`} width="80%" height="100%" />
+            </Grid >
         <Grid item xs={12} md={6} >
           <Box display='flex' flexDirection='column' color='#ffffff'>
             <Typography lineHeight='26px' textAlign='justify'>
@@ -73,14 +47,7 @@ const About = ({ myref }) => {
             <Typography lineHeight='26px' textAlign='justify' mt='16px'>
               {`Additionally, my knowledge of Machine Learning and the Internet of Things gives me the ability to create applications that can learn from and adapt to user behavior and interact with physical devices.`}
             </Typography>
-            {/* <List className={`${classes["pt-0"]}`}>
-              {['Software Development', 'IoT'].map(it =>
-              (<ListItem key={it} disablePadding>
-                <Typography lineHeight='26px' mt='8px'>
-                  * {it}
-                </Typography>
-              </ListItem>))}
-            </List> */}
+
             <Typography lineHeight='26px' textAlign='justify' mt='16px'>
               I am a Graduate student doing MEng at Electrical and Computer Engineering in University of Waterloo with focus on software, AI/ML specialization.
             </Typography>

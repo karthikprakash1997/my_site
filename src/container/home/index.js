@@ -5,7 +5,6 @@ import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
 // import WrapperSection from "../../components/section";
 import { Download, LinkedIn, Email, GitHub } from '@mui/icons-material';
-import MyPDF from '../../assets/resume/karthik_prakash.pdf';
 // import aihead from '../../../public/assets/images'
 
 const Home = ({ myref }) => {
@@ -53,21 +52,26 @@ const Home = ({ myref }) => {
 
     const classes = useStyles();
 
-    // const typedAnimation = useMemo(() => {
-    //     return (
-    //         <Typed
-    //             strings={[
-    //                 "Software Developer",
-    //                 "Tech Enthusiast",
-    //                 "Writer"
-    //             ]}
-    //             typeSpeed={30}
-    //             className={`${classes.linearText} ${classes.gradName}`}
-    //             backSpeed={30}
-    //             loop
-    //         />
-    //     )
-    // }, [classes.linearText, classes.gradName]);
+    const handleClick = async() =>{
+        fetch('https://docs.google.com/document/u/0/export?format=pdf&id=1o1x9grNFMCheyPo1h3BNM8T0YZwMhpbmPPgisVLqp9o&token=AC4w5VhF_HIExO5VwsDG3EELo966C4J0lw%3A1674926020940&ouid=115286562721012512514&includes_info_params=true&usp=drive_web&cros_files=false').then(response=> response.blob().then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const createdDoc = document.createElement('a');
+        createdDoc.href = url;
+        createdDoc.download = `karthik_prakash_sivakumar_resume.pdf`;
+        createdDoc.click();
+        createdDoc.remove();
+      }))
+     
+      fetch('https://docs.google.com/document/u/0/export?format=pdf&id=1hpZWkuc285xZPmLiyw4Nksyd59i0wdK2X-wTc9gSzSQ&token=AC4w5Vgf-La_R9m_PYPESXXRQq9Y75nOjg%3A1674927200528&ouid=115286562721012512514&includes_info_params=true&usp=drive_web&cros_files=false').then(response=> response.blob().then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const createdDoc = document.createElement('a');
+        createdDoc.href = url;
+        createdDoc.download = `karthik_prakash_sivakumar_cover_letter.pdf`;
+        createdDoc.click();
+        createdDoc.remove();
+      }))
+     
+    }
 
     return (
         // <WrapperSection >
@@ -90,7 +94,7 @@ const Home = ({ myref }) => {
                         />
                     </Box>
                     <Box display='flex' columnGap='20px' marginTop='20px' className={`${classes.csvHldr}`}>
-                        <Button href={MyPDF} download="karthik_prakash.pdf" variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
+                        <Button onClick={handleClick} variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>Download CV <Download htmlColor='#FE6B8B' /></Button>
                         <Box marginTop={'20px'} className='skill-list' display='flex' alignItems='center' justifyContent='center'>
                             <GitHub cursor="pointer" onClick={() => window.open("https://www.github.com/karthikprakash1997")} fontSize='large' sx={{ color: 'white', height: '42px' }} />
                             <LinkedIn cursor="pointer" onClick={() => window.open("https://www.linkedin.com/in/karthik-prakash-s")} fontSize='large' sx={{ color: 'white', height: '42px' }} />
@@ -111,18 +115,6 @@ const Home = ({ myref }) => {
                     {[...Array(200)].map((it, index) => <div className="circle-container" key={index}>
                         <div className="circle"></div></div>)}
                 </div>
-                {/* </WrapperSection > */}
-                {/* <Box
-                    component="img"
-                    sx={{
-                        width:"100%",
-                        height:"100%"
-                        //   maxHeight: { xs: 233, md: 167 },
-                        //   maxWidth: { xs: 350, md: 250 },
-                    }}
-                    alt="Ai Head"
-                    src="'../../../public/assets/images/ai_head.png'"
-                /> */}
                 <img src={window.location.origin + '/assets/images/ai_head.png'} alt='Ai Head' width="100%" height="100%" />
             </Grid >
         </Grid >
