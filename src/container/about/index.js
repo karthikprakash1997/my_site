@@ -35,7 +35,7 @@ const About = ({ myref }) => {
       <Grid container spacing={2} justifyContent='center' width='unset'>
          <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' >
                 <img src={window.location.origin + "/assets/images/myself/1.jpg"}  alt="karthik_prakash"
-            className={`${classes.profile}`} width="80%" height="100%" />
+            className={`${classes.profile}`} width="90%" height="100%" />
             </Grid >
         <Grid item xs={12} md={6} >
           <Box display='flex' flexDirection='column' color='#ffffff' className={`${classes.textIndent}`}>

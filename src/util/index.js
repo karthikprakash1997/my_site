@@ -51,11 +51,11 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     date: "Jan 2023 - Present",
     icon: <SchoolIcon />,
     value: "University of Waterloo",
+    description: [''],
     iconStyle: { background: "#eeeeee", color: "#FE6B8B" },
     title: "MEng Eelctrical and Computer Engineering",
     location: "",
-    description: "",
-    contentStyle: {
+       contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
     },
@@ -69,7 +69,8 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     title: "Software Developer-Applications @Aximsoft",
     value: "aximsoft",
     location: "Coimbatore",
-    description: "",
+    description: ["Developed large-scale web applications using frameworks and libraries such as React JS in the front end and Node JS, Express JS, and PostgreSQL in the back end.",
+    "Create RESTful API using Node JS, Express JS, PostgreSQL, and MongoDB and bind the data to the front-end React application using sagas and redux."],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -84,7 +85,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#eeeeee", color: "#FE6B8B" },
     title: "ML Certification from Coursera.com",
     location: "",
-    description: "",
+    description: [''],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -99,7 +100,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#FE6B8B", color: "#eeeeee" },
     title: "Internship @DevlingR&D",
     location: "",
-    description: "",
+    description: [''],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -114,7 +115,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#eeeeee", color: "#FE6B8B" },
     title: "Internship @TANGEDCO",
     location: "",
-    description: "",
+    description: [''],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -129,7 +130,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#FE6B8B", color: "#eeeeee" },
     title: "B.E EEE(SW) @PSG College of Technology",
     location: "",
-    description: "",
+    description: [''],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -146,6 +147,7 @@ export const EXPERIENCE_DETAILS = {
     subtitle: "Company",
     subtitleDescription: "Aximsoft",
     isPink: true,
+    isReadMore:true,
     description: [
       "Developed large-scale web applications using frameworks and libraries such as React JS in the front end and Node JS, Express JS, and PostgreSQL in the back end.",
       "Create RESTful API using Node JS, Express JS, PostgreSQL, and MongoDB and bind the data to the front-end React application using sagas and redux.",
@@ -310,6 +312,7 @@ export const PROJECTS = [
     secondarySubtitleText: "Intern",
     isPink: true,
     isPara: true,
+    isReadMore:true,
     description: [
       'The project aims to alert the local distribution board on any obstacle that may affect the pole during any natural calamity. The real inspiration behind the project was a typhoon named "Gaja" that hit various parts of our state during 2018. The cyclone damaged 84,836 poles, 1,152 km of high tension lines, 3,087 km of low tension lines, and 841 distribution transformers and incurred a loss of 80 crore rupees to the government. The damage was not directly caused by the cyclonic wind but by the trees that fell on the poles. The disaster management system monitors the electric poles and alerts the distribution board on any disturbances such as trees and banners that can be a potential threat to it during any natural calamity.',
       "The system monitors the poles using ultrasonic and laser sensors. The sensors placed in the electric poles create a field (calibrated by the user). The data is processed by the NodeMCU 8266 processor, which has an inbuilt wifi processor which sends the data to the cloud server (Ubidots). The application helps to present the data of the multiple poles in the form of tables and graphs. When the disturbance inside the calibrated area persists, the application alerts the user and sends the pole location that needs attention.",

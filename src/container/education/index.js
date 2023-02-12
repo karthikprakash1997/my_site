@@ -24,6 +24,7 @@ const Education = ({ myref }) => {
         <VerticalTimeline>
           {WORD_EXPERIENCE_AND_EDUCATION_TIMELINE.map((it, index) => {
             const data = EXPERIENCE_DETAILS[it.value];
+            const description = it?.description;
             return (
               <VerticalTimelineElement
                 key={index}
@@ -51,7 +52,7 @@ const Education = ({ myref }) => {
                   <Box marginLeft={data?.isPara ? "0px" : "25px"}>
                     {!data?.isPara ? (
                       <ul>
-                        {data?.description?.map((datum, ind) => (
+                        {description?.map((datum, ind) => (
                           <li key={ind}>
                             <Typography textAlign={"justify"}>
                               {datum}
@@ -61,7 +62,7 @@ const Education = ({ myref }) => {
                       </ul>
                     ) : (
                       <>
-                        {data?.description?.map((desc, ind) => (
+                        {description?.map((desc, ind) => (
                           <Typography
                             key={ind}
                             textAlign={"justify"}
