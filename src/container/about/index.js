@@ -34,8 +34,8 @@ const About = ({ myref }) => {
 
       <Grid container spacing={2} justifyContent='center' width='unset'>
          <Grid item xs={12} md={6} display='flex' alignItems='center' justifyContent='center' >
-                <img src={window.location.origin + "/assets/images/myself/1.jpg"}  alt="karthik_prakash"
-            className={`${classes.profile}`} width="90%" height="100%" />
+                <img src={window.location.origin + "/assets/images/myself/my_avatar.jpeg"}  alt="karthik_prakash"
+            className={`${classes.profile}`} width="100%" height="100%" />
             </Grid >
         <Grid item xs={12} md={6} >
           <Box display='flex' flexDirection='column' color='#ffffff' className={`${classes.textIndent}`}>
@@ -67,3 +67,5 @@ const About = ({ myref }) => {
 };
 
 export default About;
+
+// https://gist.github.com/CodeMyUI/54ae3425579d7b7bc85a58a70f9e124b flickering animation
