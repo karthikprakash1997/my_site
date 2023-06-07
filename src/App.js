@@ -47,12 +47,20 @@ const App = () => {
   
   return (
     <>
-      <Grid className='custom-scrollbar' container maxWidth={'1400px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} >
-        <Header handleScroll={handleScroll} />
+      {/* <Grid className='custom-scrollbar' style={{backgroundColor:'#040C18'}}container maxWidth={'1400px'} marginX='auto' paddingRight={'5%'} paddingLeft={'5%'} > */}
+        {/* <Header handleScroll={handleScroll} /> */}
         <Home myref={homeref} />
-        <About myref={aboutref} />
-        <Education myref={eduref} />
+        {/* <Education myref={eduref} />
         <Skills myref={skillref} />
+        <Projects myref={projectref} />
+        <Contact myref={contatcsref} /> */}
+      {/* </Grid> */}
+      <Grid className='custom-scrollbar' container maxWidth={'1300px'} marginX='auto'  >
+        {/* <Header handleScroll={handleScroll} />
+        <Home myref={homeref} /> */}
+        {/* <About myref={aboutref} /> */}
+        <Education myref={eduref} />
+        {/* <Skills myref={skillref} /> */}
         <Projects myref={projectref} />
         <Contact myref={contatcsref} />
       </Grid>

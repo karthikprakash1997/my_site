@@ -22,7 +22,7 @@ const Header = ({ handleScroll }) => {
       boxShadow: 'unset',
       height: 70,
       padding: '0 50px',
-      backgroundColor: '#040c18'
+      // backgroundColor: '#040C18'
     },
     menu: {
       display: 'flex',
@@ -68,7 +68,7 @@ const Header = ({ handleScroll }) => {
         <ul id="menu-main-menu" className={`${classes.menu}`}>
           {HEADER.map((it, index) => (
             <li key={it.value} id={`menu-item-5${index}`} className={`${classes.menuItem}`} onClick={() => handleScroll(it.value)}>
-              <Typography fontWeight={600} color='whitesmoke'>{it.title}</Typography>
+              <Typography fontWeight={600} color='black'>{it.title}</Typography>
             </li>
           ))}
         </ul>

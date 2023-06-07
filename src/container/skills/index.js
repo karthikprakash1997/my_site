@@ -1,14 +1,15 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import Heading from "../../components/heading";
-import { BACK_END, DEVOPS, FRONT_END, ML_IOT } from "../../util";
+// import { BACK_END, DEVOPS, FRONT_END, ML_IOT } from "../../util";
+// import { StaticCloud } from "../projects/dynamic-icons";
 
 const Skills = ({ myref }) => {
   return (
     <Grid ref={myref} marginTop={"150px"}>
       <Heading heading="Tech Stack" isSecondary />
-      <Grid container display="flex" justifyContent="center">
-        {[FRONT_END, BACK_END, DEVOPS, ML_IOT].map((it) => (
+        {/* <StaticCloud/> */}
+        {/* {[FRONT_END, BACK_END, DEVOPS, ML_IOT].map((it) => (
           <Grid
             item
             md={3}
@@ -29,7 +30,10 @@ const Skills = ({ myref }) => {
                 return (
                   <img
                     key={it}
-                    src={window.location.origin +  `/assets/images/tools/${icon}.png`}
+                    src={
+                      window.location.origin +
+                      `/assets/images/tools/${icon}.png`
+                    }
                     alt={it}
                     width={it === "express" ? "150px" : "60px"}
                     height={"60px"}
@@ -37,10 +41,8 @@ const Skills = ({ myref }) => {
                 );
               })}
             </Box>
-            {/* </Box> */}
           </Grid>
-        ))}
-      </Grid>
+        ))} */}
     </Grid>
   );
 };

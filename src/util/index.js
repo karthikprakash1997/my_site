@@ -7,7 +7,7 @@ export const HEADER = [
   { title: "About", value: "about" },
   { title: "Education & Experience", value: "education" },
   { title: "Skills", value: "skills" },
-  { title: "Projects", value: "projects" },
+  // { title: "Projects", value: "projects" },
   // { title: 'Interests', value: 'interests' },
   { title: "Contact", value: "contact" },
 ];
@@ -51,11 +51,11 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     date: "Jan 2023 - Present",
     icon: <SchoolIcon />,
     value: "University of Waterloo",
-    description: [''],
+    description: [""],
     iconStyle: { background: "#eeeeee", color: "#FE6B8B" },
     title: "MEng Eelctrical and Computer Engineering",
     location: "",
-       contentStyle: {
+    contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
     },
@@ -69,8 +69,10 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     title: "Software Developer-Applications @Aximsoft",
     value: "aximsoft",
     location: "Coimbatore",
-    description: ["Developed large-scale web applications using frameworks and libraries such as React JS in the front end and Node JS, Express JS, and PostgreSQL in the back end.",
-    "Create RESTful API using Node JS, Express JS, PostgreSQL, and MongoDB and bind the data to the front-end React application using sagas and redux."],
+    description: [
+      "Developed large-scale web applications using frameworks and libraries such as React JS in the front end and Node JS, Express JS, and PostgreSQL in the back end.",
+      "Create RESTful API using Node JS, Express JS, PostgreSQL, and MongoDB and bind the data to the front-end React application using sagas and redux.",
+    ],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -85,7 +87,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#eeeeee", color: "#FE6B8B" },
     title: "ML Certification from Coursera.com",
     location: "",
-    description: [''],
+    description: [""],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -100,7 +102,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#FE6B8B", color: "#eeeeee" },
     title: "Internship @DevlingR&D",
     location: "",
-    description: [''],
+    description: [""],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -115,7 +117,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#eeeeee", color: "#FE6B8B" },
     title: "Internship @TANGEDCO",
     location: "",
-    description: [''],
+    description: [""],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -130,7 +132,7 @@ export const WORD_EXPERIENCE_AND_EDUCATION_TIMELINE = [
     iconStyle: { background: "#FE6B8B", color: "#eeeeee" },
     title: "B.E EEE(SW) @PSG College of Technology",
     location: "",
-    description: [''],
+    description: [""],
     contentStyle: {
       background: "rgb(33, 150, 243)",
       color: "rgba(0, 0, 0, 0.87)",
@@ -147,7 +149,7 @@ export const EXPERIENCE_DETAILS = {
     subtitle: "Company",
     subtitleDescription: "Aximsoft",
     isPink: true,
-    isReadMore:true,
+    isReadMore: true,
     description: [
       "Developed large-scale web applications using frameworks and libraries such as React JS in the front end and Node JS, Express JS, and PostgreSQL in the back end.",
       "Create RESTful API using Node JS, Express JS, PostgreSQL, and MongoDB and bind the data to the front-end React application using sagas and redux.",
@@ -312,7 +314,7 @@ export const PROJECTS = [
     secondarySubtitleText: "Intern",
     isPink: true,
     isPara: true,
-    isReadMore:true,
+    isReadMore: true,
     description: [
       'The project aims to alert the local distribution board on any obstacle that may affect the pole during any natural calamity. The real inspiration behind the project was a typhoon named "Gaja" that hit various parts of our state during 2018. The cyclone damaged 84,836 poles, 1,152 km of high tension lines, 3,087 km of low tension lines, and 841 distribution transformers and incurred a loss of 80 crore rupees to the government. The damage was not directly caused by the cyclonic wind but by the trees that fell on the poles. The disaster management system monitors the electric poles and alerts the distribution board on any disturbances such as trees and banners that can be a potential threat to it during any natural calamity.',
       "The system monitors the poles using ultrasonic and laser sensors. The sensors placed in the electric poles create a field (calibrated by the user). The data is processed by the NodeMCU 8266 processor, which has an inbuilt wifi processor which sends the data to the cloud server (Ubidots). The application helps to present the data of the multiple poles in the form of tables and graphs. When the disturbance inside the calibrated area persists, the application alerts the user and sends the pole location that needs attention.",
@@ -395,3 +397,41 @@ export const PROJECTS = [
     ],
   },
 ];
+
+export const AXIMSOFT_FRONTEND_DEVELOPMENT = [
+  "Led the team in building the entire front-end React application and bound the JSON data to the front-end React application from APIs and Websocket using Redux, Redux-Sagas, and successfully fused the React application into another Ember JS application.",
+  "Create and customize interactive dashboards, editors, tables, calendars, forms, and charts and generate reports using libraries like DraftJS, Highcharts, Material-UI, and React-Bootstrap resulting in a 25% increase in user engagement and improved data visualization.",
+  "Took ownership of the products and streamlined internal tools and libraries to reduce code duplication and technical debt by creating reusable components and custom hooks, improving development efficiency by 35%.",
+  "Consistently conducted thorough testing and troubleshooting with Jest, effectively addressing and debugging bugs, improving application stability, and significantly reducing downtime by up to 10%.",
+  "Conducted code reviews, and code documentation and led a team of three developers, providing mentorship on best practices and coding standards, improving code readability, scalability, and modularity.",
+  "Contributed to the success of the team beyond the scope of my role, hence awarded ”Team Player of the Month” thrice.",
+];
+
+export const AXIMSOFT_BACKEND_DEVELOPMENT = [
+  "Performed CRUD operation and implemented 20+ new RESTful APIs using Node JS, Express JS, GraphQL, and PostgreSQL, including the successful integration of GraphQL, resulting in a 40% reduction in API requests and a 30% improvement in response time.",
+  "Infused OpenAI with customized prompts for each user based on their previous posts, upgrading the application to a smarter system.",
+  "Automated AI generated social media posts on various social media platforms using Cron and posted them using Social Media APIs and increased the user’s social media presence by 25%.",
+  "Successfully implemented GraphQL API in a large-scale application at Aximosoft, reducing the number of API requests by 40% and improving response time by 30%.",
+];
+
+export const FASHION_MINISAT = [
+  "Achieved 94% accuracy for the CNN model by performing hyperparameter tuning to determine the optimal neural network architecture.",
+  "Identified mystery labels in the dataset by leveraging encodings from the intermediate layer of a CNN model by applying dimensionality reduction with PCA and employing unsupervised learning algorithms such as K-means and DBSCAN for clustering.",
+  "Analyzed feature extraction through dimensionality reduction using PCA and Autoencoder and determined that Autoencoder generated the most effective representation based on improved classification test accuracy with KNN."
+];
+
+export const FEATURE_MATCHING = [
+  "Conducted a comparison study of feature matching algorithms (SIFT, SURF, ORB and AKAZE) for Pancreas CT Scan dataset.",
+  "Enhanced the matching accuracy of the feature matching algorithms by using RANSAC to remove outliers.",
+  "Implemented an ensemble of SURF and ORB to construct an improved 3D point cloud construction of the Pancreas."
+];
+
+
+export const CRIBBO = [
+  "Architected backend infrastructure with the development team, encompassing the design of servers, MongoDB databases, and microservices using Moleculer JS framework, to establish a solid foundation for enhanced scalability and performance of the application.",
+  "Expertly integrated third-party APIs, such as Equifax to retrieve user credit reports and convert them into a readable PDF format, and Stripe to implement a seamless payment system, resulting in enhanced application capabilities.",
+  "Leveraged Nodemailer and SendGrid for efficient email communication and Firebase Cloud Messaging for real-time notifications, resulting in a 20% increase in user engagement, and built robust chat APIs to facilitate seamless communication between users.",
+  "Documented the code using Swagger, enabling effective communication among team members by providing an interactive interface for exploring and understanding the API.",
+  // "Implemented CI/CD pipelines using GitHub, Travis, Docker, and AWS, resulting in a remarkable 50% reduction in deployment time, faster code delivery, and a significant 40% decrease in deployment errors."
+];
+

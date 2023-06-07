@@ -15,7 +15,7 @@ const Footer = () => {
 			display: 'flex',
 			justifyContent: 'center',
 			alignItems: 'center',
-			background: 'linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%)',
+			background: 'black',
 			height: 90,
 			padding: '0 50px',
 			marginTop: '150px'

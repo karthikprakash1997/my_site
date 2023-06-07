@@ -7,15 +7,15 @@ import { makeStyles } from "@mui/styles";
 const Heading = ({ heading, isSecondary = false, variant='h3' }) => {
     const useStyles = makeStyles({
         linearText: {
-            background: "-webkit-linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%)",
+            // background: "-webkit-linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%)",
             WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            // WebkitTextFillColor: "transparent",
         },
         headingBar:{
             width: '75%',
             height: '3px',
-            background:'linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%)',
-            boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+            background:'rgb(61,143,245)',
+            // boxShadow: '0px 4px 4px rgb(61,143,245)',
             marginBottom: '0.25rem'
         }
     })
