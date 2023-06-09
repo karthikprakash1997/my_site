@@ -49,7 +49,7 @@ const Cribbo = ({ myref }) => {
         >
           <img
             className={`${classes.proImg}`}
-            src={window.location.origin + `/assets/images/exp/axim.jpeg`}
+            src={window.location.origin + `/assets/images/exp/empty.jpeg`}
             alt="projects"
           />
         </Box>
