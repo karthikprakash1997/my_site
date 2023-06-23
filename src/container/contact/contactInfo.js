@@ -8,13 +8,13 @@ import { INITIAL_SNACKBAR } from "../../util";
 const ContactInfo = () => {
     const useStyles = makeStyles({
         linearText: {
-            background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+            background: "-webkit-linear-gradient(45deg, rgb(61,143,245) 30%, #FF8E53 90%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
         },
         csvBtn: {
             maxWidth: 'max-content',
-            borderColor: '#FE6B8B !important',
+            borderColor: 'rgb(61,143,245) !important',
             height: 'max-content',
             marginTop: '20px !important',
             padding: '8px !important'
@@ -24,7 +24,7 @@ const ContactInfo = () => {
         },
         border: {
             '&.Mui-focused fieldset': {
-                borderColor: '#FE6B8B !important',
+                borderColor: 'rgb(61,143,245) !important',
             }
         },
         textColor: {
@@ -34,7 +34,7 @@ const ContactInfo = () => {
             }
         },
         pinkTextColor: {
-            color: '#FE6B8B !important',
+            color: 'rgb(61,143,245) !important',
         },
     })
     const classes = useStyles();
@@ -163,7 +163,7 @@ const ContactInfo = () => {
             </div>
             <Button onClick={handleClick} variant="outlined" size='small' className={`${classes.linearText} ${classes.csvBtn}`}>
                 Send Message
-                <Send htmlColor='#FE6B8B' style={{ marginLeft: '10px' }} />
+                <Send htmlColor='rgb(61,143,245)' style={{ marginLeft: '10px' }} />
             </Button>
             <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={snackbar.isOpen} autoHideDuration={snackbar.autoHideDuration} onClose={() => setSnackbar(INITIAL_SNACKBAR)}>
                 <Alert onClose={() => setSnackbar(INITIAL_SNACKBAR)} severity={snackbar.severity} sx={{ width: '100%' }}>

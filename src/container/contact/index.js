@@ -8,8 +8,8 @@ const Contact = ({ myref }) => {
   return (
     <Grid ref={myref} container marginTop={'150px'}>
       <Heading heading={"Let's Talk"} />
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6} >
+      <Grid container display={'flex'} alignItems={'center'} justifyContent={'center'}>
+        {/* <Grid item xs={12} md={6} >
           <div style={{ padding: '5%' }}>
             <>
             <Typography>
@@ -18,11 +18,11 @@ const Contact = ({ myref }) => {
             </>
           </div>
         </Grid>
-        <Grid item xs={12} md={6} >
-          <div style={{ padding: '5%' }}>
+        <Grid item xs={12} md={6} > */}
+          <div style={{ padding: '2%', width:'700px' }}>
             <ContactInfo />
           </div>
-        </Grid>
+        {/* </Grid> */}
       </Grid>
     </Grid>
   )
