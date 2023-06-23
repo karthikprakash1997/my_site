@@ -1,10 +1,9 @@
 import React from "react";
 import Typed from "react-typed";
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-// import WrapperSection from "../../components/section";
-import { Download, LinkedIn, Email, GitHub } from "@mui/icons-material";
+import { LinkedIn, Email, GitHub } from "@mui/icons-material";
 
 const Home = ({ myref }) => {
   const useStyles = makeStyles({
@@ -69,34 +68,6 @@ const Home = ({ myref }) => {
 
   const classes = useStyles();
 
-  const handleClick = async () => {
-    fetch(
-      "https://docs.google.com/document/u/0/export?format=pdf&id=1o1x9grNFMCheyPo1h3BNM8T0YZwMhpbmPPgisVLqp9o&token=AC4w5VhF_HIExO5VwsDG3EELo966C4J0lw%3A1674926020940&ouid=115286562721012512514&includes_info_params=true&usp=drive_web&cros_files=false"
-    ).then((response) =>
-      response.blob().then((blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const createdDoc = document.createElement("a");
-        createdDoc.href = url;
-        createdDoc.download = `karthik_prakash_sivakumar_resume.pdf`;
-        createdDoc.click();
-        createdDoc.remove();
-      })
-    );
-
-    fetch(
-      "https://docs.google.com/document/u/0/export?format=pdf&id=1hpZWkuc285xZPmLiyw4Nksyd59i0wdK2X-wTc9gSzSQ&token=AC4w5Vgf-La_R9m_PYPESXXRQq9Y75nOjg%3A1674927200528&ouid=115286562721012512514&includes_info_params=true&usp=drive_web&cros_files=false"
-    ).then((response) =>
-      response.blob().then((blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const createdDoc = document.createElement("a");
-        createdDoc.href = url;
-        createdDoc.download = `karthik_prakash_sivakumar_cover_letter.pdf`;
-        createdDoc.click();
-        createdDoc.remove();
-      })
-    );
-  };
-
   return (
     <Grid
       ref={myref}
@@ -130,7 +101,7 @@ const Home = ({ myref }) => {
                 fontSize="30px"
                 className={`${classes.linearText} ${classes.greeting}`}
               >
-                👋, I am{" "}
+                <span role="img" aria-label="">👋,I am</span>{" "}
               </Typography>
               <Typography
               lineHeight={1}

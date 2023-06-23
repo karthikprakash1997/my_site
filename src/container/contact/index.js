@@ -1,7 +1,6 @@
 import React from "react";
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import ContactInfo from './contactInfo';
-import Map from './map';
 import Heading from "../../components/heading";
 
 const Contact = ({ myref }) => {

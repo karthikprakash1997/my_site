@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { FASHION_MINISAT, FEATURE_MATCHING } from "../../util";
 
-const UWaterloo = ({ myref }) => {
+const UWaterloo = () => {
   const useStyles = makeStyles({
     projects: {
       display: "flex",
@@ -28,10 +28,6 @@ const UWaterloo = ({ myref }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const [state, setState] = useState();
-  const handleClick = (str) => {
-    setState(str);
-  };
 
   return (
     <>

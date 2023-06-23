@@ -4,8 +4,6 @@ import { makeStyles } from "@mui/styles";
 import {
   AXIMSOFT_BACKEND_DEVELOPMENT,
   AXIMSOFT_FRONTEND_DEVELOPMENT,
-  AXIMSOFT_FRONT_END_DEVELOPMENT,
-  PROJECTS,
 } from "../../util";
 import { useState } from "react";
 
