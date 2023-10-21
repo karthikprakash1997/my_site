@@ -149,7 +149,7 @@ const Cribbo = ({ myref }) => {
               prop-tech startup culture.{" "}
             </Typography>
           </Box>
-          <Box
+          {/* <Box
             display="flex"
             // justifyContent="center"
             alignItems="center"
@@ -165,7 +165,7 @@ const Cribbo = ({ myref }) => {
             >
               Contributions
             </Typography>
-          </Box>
+          </Box> */}
 
           {state === "cribbo" && (
             <Box marginLeft={"25px"}>

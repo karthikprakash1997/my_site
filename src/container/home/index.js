@@ -17,9 +17,9 @@ const Home = ({ myref }) => {
      
     },
     backGroundImage:{
-      background: `url(${window.location.origin}/assets/images/myself/myself.jpg) `,
+      background: `url(${window.location.origin}/assets/images/myself/2.jpg) `,
       backgroundPosition: "center",
-      transform:"scaleX(-1)",
+      // transform:"scaleX(-1)",
       content: "''",
       position: 'absolute',
       top: 0,

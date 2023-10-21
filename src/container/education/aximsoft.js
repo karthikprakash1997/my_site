@@ -32,7 +32,7 @@ const Aximsoft = ({ myref }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const [state, setState] = useState();
+  const [state] = useState();
 
   return (
     <>
@@ -214,7 +214,7 @@ const Aximsoft = ({ myref }) => {
               I have actively contribute Working as a software developer at
               Aximsoft has been a fulfilling and rewarding experience.
             </Typography>
-            <Box
+            {/* <Box
               display="flex"
               // justifyContent="center"
               alignItems="center"
@@ -230,7 +230,7 @@ const Aximsoft = ({ myref }) => {
               >
                 Contributions
               </Typography>
-            </Box>
+            </Box> */}
             {state === "aximsoft" && (
               <>
                 <Typography
