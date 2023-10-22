@@ -149,7 +149,7 @@ const UWaterloo = () => {
               extracurricular activities has not only broadened my horizons but
               also allowed me to forge meaningful connections with like-minded
               peers who share my enthusiasm and drive. Additionally, the
-              opportunity to serve as a mentor to junior students has been
+              opportunity to serve as a student mentor and mentor at Hack the North has been
               incredibly rewarding, as I've had the chance to impart my
               knowledge and experiences, fostering their growth and development.
             </Typography>

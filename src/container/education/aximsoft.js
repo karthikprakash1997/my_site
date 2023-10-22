@@ -144,13 +144,10 @@ const Aximsoft = ({ myref }) => {
               part of a dynamic and innovative team. My time at Aximsoft has
               been filled with exciting challenges and rewarding achievements.
               One notable accomplishment was successfully developing two
-              large-scale applications {" "} 
-              <Link
-                href="https://www.rallio.com"
-              >
-                {"Rallio"}
-              </Link>
-               {" and "} <Link href="https://www.inteliglas.com">{"InteliGlas"}</Link>.
+              large-scale applications{" "}
+              <Link href="https://www.rallio.com">{"Rallio"}</Link>
+              {" and "}{" "}
+              <Link href="https://www.inteliglas.com">{"InteliGlas"}</Link>.
             </Typography>
 
             <Typography
@@ -210,9 +207,9 @@ const Aximsoft = ({ myref }) => {
             >
               At Aximsoft, I have consistently embraced new challenges and
               demonstrated a commitment to continuous learning and growth. By
-              staying up to date with emerging technologies and industry trends,
-              I have actively contribute Working as a software developer at
-              Aximsoft has been a fulfilling and rewarding experience.
+              staying up to date with emerging technologies and industry trends.
+              Working as a software developer at Aximsoft has been a fulfilling
+              and rewarding experience.
             </Typography>
             {/* <Box
               display="flex"
